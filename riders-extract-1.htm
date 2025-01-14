@@ -1,0 +1,906 @@
+  <meta charset="utf-8">
+  <title>J.Extract 1.6 - to extract all</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<div id="top">
+  CORS Anywhere demo &bull; <a href="https://github.com/Rob--W/cors-anywhere/">Github</a> &bull; <a href="http://cors-anywhere.herokuapp.com">Live server</a>.
+  
+  <button id="button">Extract Me</button>
+<br>
+  <label>
+    Url to be fetched (example: <a href="//robwu.nl/dump.php">robwu.nl/dump.php</a>)
+    <input type="url" id="url" value="https://racing.hkjc.com/racing/SystemDataPage/racing/ResultsAll-iframe-SystemDataPage.aspx?lang=Chinese&match_id=">
+    <script>var dt = new Date();
+document.getElementById("url").value=document.getElementById("url").value + dt.getFullYear() +""+ ("0" + (dt.getMonth() +　1)).slice(-2) +""+ ("0" + dt.getDate()).slice(-2);</script> 
+     
+  </label>
+    <label>
+    If using POST, enter the data:
+    <input type="text" id="data">
+  </label>
+<label>
+    <button id="get">GET</button><button id="post">POST</button><button id="postUrl">DATEodd</button><button id="infoall">INFOall</button>
+  </label>
+</div>
+<div id="bottom">
+  <textarea id="output"></textarea>
+</div>
+<div id="bottom">
+  <textarea id="outputodds"></textarea>
+</div>
+
+<table id="w">
+  <tr>
+    <td>
+      <input type="text" id="race1K" cat="pp" size="14" value="" />
+    </td>
+    <td>
+      <input type="text" id="race2K" cat="pp" size="14" value="" />
+    </td>
+    <td>
+      <input type="text" id="race3K" cat="pp" size="14" value="" />
+    </td>
+    <td>
+      <input type="text" id="race4K" cat="pp" size="14" value="" />
+    </td>
+    <td>
+      <input type="text" id="race5K" cat="pp" size="14" value="" />
+    </td>
+    <td>
+      <input type="text" id="race6K" cat="pp" size="14" value="" />
+    </td>
+    <td>
+      <input type="text" id="race7K" cat="pp" size="14" value="" />
+    </td>
+    <td>
+      <input type="text" id="race8K" cat="pp" size="14" value="" />
+    </td>
+    <td>
+      <input type="text" id="race9K" cat="pp" size="14" value="" />
+    </td>
+    <td>
+      <input type="text" id="race10K" size="6" value="" />
+    </td>
+    <td>
+      <input type="text" id="race11K" size="6" value="" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="text" id="race1Q" cat="pp" size="14" value="" />
+    </td>
+    <td>
+      <input type="text" id="race2Q" cat="pp" size="14" value="" />
+    </td>
+    <td>
+      <input type="text" id="race3Q" cat="pp" size="14" value="" />
+    </td>
+    <td>
+      <input type="text" id="race4Q" cat="pp" size="14" value="" />
+    </td>
+    <td>
+      <input type="text" id="race5Q" cat="pp" size="14" value="" />
+    </td>
+    <td>
+      <input type="text" id="race6Q" cat="pp" size="14" value="" />
+    </td>
+    <td>
+      <input type="text" id="race7Q" cat="pp" size="14" value="" />
+    </td>
+    <td>
+      <input type="text" id="race8Q" cat="pp" size="14" value="" />
+    </td>
+    <td>
+      <input type="text" id="race9Q" cat="pp" size="14" value="" />
+    </td>
+    <td>
+      <input type="text" id="race10Q" size="6" value="" />
+    </td>
+    <td>
+      <input type="text" id="race11Q" size="6" value="" />
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <input type="text" id="race1J" cat="pp" size="14" value="" />
+    </td>
+    <td>
+      <input type="text" id="race2J" cat="pp" size="14" value="" />
+    </td>
+    <td>
+      <input type="text" id="race3J" cat="pp" size="14" value="" />
+    </td>
+    <td>
+      <input type="text" id="race4J" cat="pp" size="14" value="" />
+    </td>
+    <td>
+      <input type="text" id="race5J" cat="pp" size="14" value="" />
+    </td>
+    <td>
+      <input type="text" id="race6J" cat="pp" size="14" value="" />
+    </td>
+    <td>
+      <input type="text" id="race7J" cat="pp" size="14" value="" />
+    </td>
+    <td>
+      <input type="text" id="race8J" cat="pp" size="14" value="" />
+    </td>
+    <td>
+      <input type="text" id="race9J" cat="pp" size="6" value="" />
+    </td>
+    <td>
+      <input type="text" id="race10J" cat="pp" size="6" value="" />
+    </td>
+    <td>
+      <input type="text" id="race11J" cat="pp" size="6" value="" />
+    </td>
+  </tr>
+ <tr>
+    <td>
+      <input type="text" id="race1T" cat="pp" size="6" value="" />
+    </td>
+    <td>
+      <input type="text" id="race2T" cat="pp" size="6" value="" />
+    </td>
+    <td>
+      <input type="text" id="race3T" cat="pp" size="6" value="" />
+    </td>
+    <td>
+      <input type="text" id="race4T" cat="pp" size="6" value="" />
+    </td>
+    <td>
+      <input type="text" id="race5T" cat="pp" size="6" value="" />
+    </td>
+    <td>
+      <input type="text" id="race6T" cat="pp" size="6" value="" />
+    </td>
+    <td>
+      <input type="text" id="race7T" cat="pp" size="6" value="" />
+    </td>
+    <td>
+      <input type="text" id="race8T" cat="pp" size="6" value="" />
+    </td>
+    <td>
+      <input type="text" id="race9T" cat="pp" size="6" value="" />
+    </td>
+    <td>
+      <input type="text" id="race10T" cat="pp" size="6" value="" />
+    </td>
+    <td>
+      <input type="text" id="race11T" cat="pp" size="6" value="" />
+    </td>
+  </tr>
+</table>
+<hr style="width:800px; height:0px; margin-left:0px;"/>
+<table>
+ <tr>
+
+    <td>
+      <input type="text" id="race1F" cat="pp" size="6" value="" />
+    </td>
+    <td>
+      <input type="text" id="race2F" cat="pp" size="6" value="" />
+    </td>
+    <td>
+      <input type="text" id="race3F" cat="pp" size="6" value="" />
+    </td>
+    <td>
+      <input type="text" id="race4F" cat="pp" size="6" value="" />
+    </td>
+    <td>
+      <input type="text" id="race5F" cat="pp" size="6" value="" />
+    </td>
+    <td>
+      <input type="text" id="race6F" cat="pp" size="6" value="" />
+    </td>
+    <td>
+      <input type="text" id="race7F" cat="pp" size="6" value="" />
+    </td>
+    <td>
+      <input type="text" id="race8F" cat="pp" size="6" value="" />
+    </td>
+    <td>
+      <input type="text" id="race9F" cat="pp" size="6" value="" />
+    </td>
+    <td>
+      <input type="text" id="race10F" cat="pp" size="6" value="" />
+    </td>
+    <td>
+      <input type="text" id="race11F" cat="pp" size="6" value="" />
+    </td>
+  </tr>
+  </table>
+  <button id="savebase">save base-KQJ</button>
+  <button id="KQJuptocloud">upload to cloud-KQJ</button> 
+  <button id="backfromcloud">dnload KQJ fm cloud</button> 
+<br>
+  <button id="savebaseodds">save base-odds</button>
+  <button id="uptocloudodds">upload to cloud-odds</button> 
+<br>
+  <button id="savebaseqcode">save base-qcodes</button>
+  <button id="qcodesuptocloud">upload to cloud-qcodes</button> 
+  <button id="qcodesbackfromcloud">dnload qcodes fm cloud</button> 
+<br>
+  <button id="savebasescode">save base-scodes</button>
+  <button id="scodesuptocloud">upload to cloud-scodes</button> 
+  <button id="scodesbackfromcloud">dnload scodes fm cloud</button> 
+<br>
+  <button>....................</button><button id="scodesbackfromcloudbkup">dnload scodes fm cloud-bkup</button>  
+<br>
+  <button id="uptocloudinfo">upload to cloud-info</button> 
+
+<style>
+html, body {
+  margin: 0;
+  height: 100%;
+  padding: 3px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+* {
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+label { display: block; }
+input {
+  display: block;
+  width: 100%;
+  padding: 8px 5px;
+  border: 1px solid #CCC;
+}
+button {
+  display: inline-block;
+  width: 25%;
+  padding: 8px;
+}
+textarea {
+  width: 50%;
+  height: 100%;
+}
+#top {
+  height: 180px;
+  position: relative;
+
+}
+#bottom {
+  height: 100%;
+  margin-top: -180px;
+  padding-top: 180px;
+}	
+</style>
+
+<script>
+var cors_api_url = "https://cors-anywhere.herokuapp.com/";
+function doCORSRequest(options, printResult) {
+  var x = new XMLHttpRequest();
+  x.open(options.method, cors_api_url + options.url);
+  x.onload = x.onerror = function() {
+    printResult(
+      options.method +
+        " " +
+        options.url +
+        "\n" +
+        x.status +
+        " " +
+        x.statusText +
+        "\n\n" +
+        (x.responseText || "")
+    );
+  };
+  if (/^POST/i.test(options.method)) {
+    x.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+  }
+  x.send(options.data);
+}
+
+// Bind event
+(function() {
+  var urlField = document.getElementById("url");
+  var dataField = document.getElementById("data");
+  var outputField = document.getElementById("output");
+  console.log("button hit>>>");
+  document.getElementById("get").onclick = document.getElementById(
+    "post"
+  ).onclick = function(e) {
+    e.preventDefault();
+    doCORSRequest(
+      {
+        method: this.id === "post" ? "POST" : "GET",
+        url: urlField.value,
+        data: dataField.value
+      },
+      function printResult(result) {
+        outputField.value = result;
+      }
+    );
+  };
+  console.log("bingo=", outputField.value);
+  //arrayStr = document.getElementsByTagName('output').value.split("<td>");
+  //    console.log("kk=",arragStr);
+})();
+if (typeof console === "object") {
+  console.log(
+    "// To test a local CORS Anywhere server, set cors_api_url. For example:"
+  );
+  console.log('cors_api_url = "http://localhost:8080/"');
+}
+
+/// here
+/// here
+document.getElementById("button").addEventListener("click", function() {
+  var outputField = document.getElementById("output");
+  var outputFieldOdds = document.getElementById("outputodds");
+  var arrayK = new Array();
+  var arrayQ = new Array();
+  var arrayJ = new Array();
+  var arrayT = new Array();
+  var odds = new Object();
+  odds.queue = new Array();
+  var infos = new Object();
+  infos.queue = new Array();
+
+  if (outputField.value.indexOf("hkhorsedb") < 60) {
+  // here infoall
+    console.log("infoall scan>>");
+  arrayStr = outputField.value.split("<td width=\"88");
+  arrayStr.forEach((element, index, array) => {
+    if (element.indexOf("BrandNo=") > 0) {
+      //      console.log("infoele=", element.indexOf('horseno='));
+      //      console.log("ele=", element);
+      //      console.log("key=", element.split(/600\)\"\>/)[1].split(/</)[0]);
+      //      console.log("name=", element.split(/horseno\=/)[1].split(/\'/)[0]);
+      //      console.log("key2=", array[index+12].split(/\>/)[1].split(/</)[0]);
+      infos.queue.push({
+        key: element.split(/BrandNo\=/)[1].split(/</)[0].split(/>/)[1].trim(),
+        name: element.split(/BrandNo\=/)[1].split(/\"/)[0],
+        key2: element.split(/center\"\>/)[4].split(/</)[0]
+      });
+    };
+  });
+  console.log("infos=", infos);
+  if (infos.queue.length > 0) {
+    // do update
+    outputFieldOdds.value = '';
+    outputFieldOdds.value = JSON.stringify(infos);
+  }
+// end infoall
+  }
+  
+  //  console.log("bingo1=",outputField.value);
+  // str = document.getElementsByTagName("output");
+  arrayStr = outputField.value.split("<td ");
+  arrayStr.forEach((element, index) => {
+    if (
+      element.indexOf("color_red5") > 20 &&
+      element.indexOf("HorseId") > 20 &&
+      element.indexOf('color_red5">(') <= 0
+    ) {
+      console.log("ele=", element.indexOf('color_red5">('));
+      //      console.log("elemtodd=",element.split(/\"\>/)[3].split(/</)[0]);
+      //      console.log("split2=",element.split(/red5\"\>/)[1].split(/</)[0]);
+      odds.queue.push({
+        key: element.split(/\"\>/)[3].split(/</)[0],
+        name: element.split(/\"\>/)[3].split(/</)[0],
+        key2: element.split(/red5\"\>/)[1].split(/</)[0]
+      });
+    }
+    if (element.indexOf("(12)") >= 0) {
+      console.log("elemt=", element);
+      //    console.log("index=",element.indexOf("\(12\)"));
+      arrayK.push(element.split(/\"\>/)[2].split(/\<\//)[0]);
+      //    arrayStr.splice(index, 1);
+    }
+    if (element.indexOf("(6)") >= 0) {
+      arrayQ.push(element.split(/\"\>/)[2].split(/\<\//)[0]);
+    }
+    if (element.indexOf("(4)") >= 0) {
+      arrayJ.push(element.split(/\"\>/)[2].split(/\<\//)[0]);
+    }
+  });
+  console.log("arrayk=", arrayK);
+  /*
+                         $('input[type="text"]').each(function(){    
+                           var id = $(this).attr('id')
+                           if ( id.indexOf('K') >4 ) {
+                             var value = arrayK.pop();
+                             $(this).val(value);                             
+                           }
+                             if ( id.indexOf('Q') >4 ) {
+                             var value = arrayQ.pop();
+                             $(this).val(value);                             
+                           }
+                             if ( id.indexOf('J') >4 ) {
+                             var value = arrayJ.pop();
+                             $(this).val(value);                             
+                           }  
+                        }); */
+  //    console.log("arraystr1=",arrayStr);
+  for (i = 0; i < arrayStr.length; i++) {
+    //      if (td_array[i].textContent == check_value){
+    if (arrayStr[i].indexOf("(12)") >= 0) {
+      //	      console.log(arrayStr[i].innerHTML);
+      //      console.log(ttcolor);
+      //        td_array[i].style.color = "red";
+    }
+  }
+
+  console.log("odd=", odds);
+  console.log("odd len=", odds.queue.length);
+  if (odds.queue.length > 0) {
+    // do update
+    outputFieldOdds.value = JSON.stringify(odds);
+  }
+
+  ////// here
+
+  var arrayRes = outputField.value.match(/nowrap\>1.*?\/td.*?\/td.*?\/td/gi);
+  arrayRes.forEach((element, index) => {
+    arrayK.push(element.split('tdAlignL">')[1].split("</td")[0]);
+  });
+  var arrayRes = outputField.value.match(/nowrap\>2.*?\/td.*?\/td.*?\/td/gi);
+  arrayRes.forEach((element, index) => {
+    arrayQ.push(element.split('tdAlignL">')[1].split("</td")[0]);
+  });
+  var arrayRes = outputField.value.match(/nowrap\>3.*?\/td.*?\/td.*?\/td/gi);
+  arrayRes.forEach((element, index) => {
+    arrayJ.push(element.split('tdAlignL">')[1].split("</td")[0]);
+  });
+  var arrayRes = outputField.value.match(/nowrap\>4.*?\/td.*?\/td.*?\/td/gi);
+  arrayRes.forEach((element, index) => {
+    arrayT.push(element.split('tdAlignL">')[1].split("</td")[0]);
+  });
+
+  outputFieldOdds.value = arrayT;
+  ///// here - put to textinputbox
+  $('input[type="text"]').each(function() {
+    var id = $(this).attr("id");
+    if (id.indexOf("K") > 4) {
+      var value = arrayK.pop();
+      $(this).val(value);
+    }
+    if (id.indexOf("Q") > 4) {
+      var value = arrayQ.pop();
+      $(this).val(value);
+    }
+    if (id.indexOf("J") > 4) {
+      var value = arrayJ.pop();
+      $(this).val(value);
+    }
+    if (id.indexOf("T") > 4) {
+      var value = arrayT.pop();
+      $(this).val(value);
+    }
+  });
+});
+
+//////////////////////////////////////
+const clouduserid = 'e4902282-fc69-4719-8ba4-b5d8349931d7';
+const apiid = '16410691-1717-428e-b081-d4ab59a744de';
+const qcodeid = '573eec50-837c-4640-8eec-e3aee36109fa';
+const scodeid = '5db0627e-f1f4-465c-9a72-a2b3c95da7e3';
+  
+$("#savebaseodds").click(function() {
+  var updatedObj = {
+    queue: [
+      { key: "1088", key2: "1088", name: "Banana" },
+      { key: "1099", key2: "1088", name: "Orange" }
+    ]
+  };
+  var updatedData = JSON.stringify(updatedObj);
+
+  // do update
+  $.ajax({
+    url: "https://jsonblob.com/api/jsonBlob/435dc429-f208-11ea-9d5c-95817253fa1e",
+    type: "PUT",
+    data: updatedData,
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+    success: function(data, textStatus, jqXHR) {
+      var json = JSON.stringify(data);
+    }
+  });
+});
+
+$("#savebase").click(function() {
+  var updatedObj = {
+    queue: [
+      { key: "1088", key2: "1088加州", name: "Banana" },
+      { key: "1099", key2: "1088", name: "Orange" }
+    ]
+  };
+  var updatedData = JSON.stringify(updatedObj);
+
+  // do update
+  $.ajax({
+    url: "https://jsonstorage.net/api/items/462b878a-fe4d-42f3-832c-31b02cd32a13",
+    type: "PUT",
+    data: updatedData,
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+    success: function(data, textStatus, jqXHR) {
+      var json = JSON.stringify(data);
+    }
+  });
+});
+
+$("#KQJuptocloud").click(function() {
+  $.getJSON("https://jsonstorage.net/api/items/462b878a-fe4d-42f3-832c-31b02cd32a13", function(posts) {
+    // posts => LS
+    localStorage.setItem("lsposts", JSON.stringify(posts));
+
+    // LS => jsonArray
+    jsonArray2 = JSON.parse(localStorage.getItem("lsposts"));
+
+    // jsonArray2 += newjson
+    $('input[type="text"]').each(function() {
+      jsonArray2.queue.push({
+        key: $(this).attr("id"),
+        name: $(this).val(),
+        key2: "//"
+      });
+    });
+    // do update
+    $.ajax({
+      url: "https://jsonstorage.net/api/items/462b878a-fe4d-42f3-832c-31b02cd32a13",
+      type: "PUT",
+      data: JSON.stringify(jsonArray2),
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      success: function(data, textStatus, jqXHR) {
+        var json = JSON.stringify(data);
+      }
+    });
+  });
+});
+/////////////////////////////////////////////////////
+$("#backfromcloud").click(function() {
+console.log("myvalue=",$(this).val()); 
+  //https://jsonblob.com/api/jsonBlob/821851da-d2a5-11ea-96d2-93752e24e800
+$.getJSON("https://jsonstorage.net/api/items/462b878a-fe4d-42f3-832c-31b02cd32a13", function(posts) {
+    for (var i = 2; i < posts.queue.length; i++) {
+      console.log("myvalue=",posts.queue.length); 
+      $('input[cat="pp"]').each(function() {
+        var id = $(this).attr("id");
+        if (id == posts.queue[i].key) {
+          var value = posts.queue[i].name;
+          $(this).val(value);
+        }
+      });
+    }
+  });
+});
+
+///////////////////////////////////////////////
+$("#savebasescode").click(function() {
+  var updatedObj = {
+    queue: [
+      { key: "1088", key2: "1088", name: "Banana" },
+      { key: "1099", key2: "1088", name: "Orange" }
+    ]
+  };
+  var updatedData = JSON.stringify(updatedObj);
+
+  // do update
+  // jsonblob.com/api/jsonBlob/c64ff3aa-f2cc-11ea-8070-6b11b868133b
+  // jsonstorage.net/api/items/25ba9612-73a4-47e0-96a5-05ee83446a69
+  //    url: "https://api.jsonstorage.net/v1/json/00000000-0000-0000-0000-000000000000/935a895e-3d4c-4ded-b255-8ed4faf64384",
+  $.ajax({
+    url: "https://api.jsonstorage.net/v1/json/"+clouduserid+"/"+scodeid + "?apiKey=" + apiid,    
+    type: "PUT",
+    data: updatedData,
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+    success: function(data, textStatus, jqXHR) {
+      var json = JSON.stringify(data);
+    }
+  });
+  
+  /////////////////////////////////////////////
+  // do update 2
+  $.ajax({
+    url: "https://jsonblob.com/api/jsonBlob/923276921475973120",
+    type: "PUT",
+    data: updatedData,
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+    success: function(data, textStatus, jqXHR) {
+      var json = JSON.stringify(data);
+    }
+  });
+});
+
+$("#scodesuptocloud").click(function() {
+  $.getJSON("https://api.jsonstorage.net/v1/json/"+clouduserid+"/"+scodeid + "?apiKey=" + apiid, function(posts) {
+    // posts => LS
+    localStorage.setItem("lsposts", JSON.stringify(posts));
+
+    // LS => jsonArray
+    jsonArray2 = JSON.parse(localStorage.getItem("lsposts"));
+
+    // jsonArray2 += newjson
+    $('input[type="text"]').each(function() {
+      jsonArray2.queue.push({
+        key: $(this).attr("id"),
+        name: $(this).val(),
+        key2: "//"
+      });
+    });
+    // do update
+    $.ajax({
+      url: "https://api.jsonstorage.net/v1/json/"+clouduserid+"/"+scodeid + "?apiKey=" + apiid,
+      type: "PUT",
+      data: JSON.stringify(jsonArray2),
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      success: function(data, textStatus, jqXHR) {
+        var json = JSON.stringify(data);
+      }
+    });
+    ////////////////////////////////////////////
+    // do update 2 
+     $.ajax({
+      url: "https://jsonblob.com/api/jsonBlob/923276921475973120",
+      type: "PUT",
+      data: JSON.stringify(jsonArray2),
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      success: function(data, textStatus, jqXHR) {
+        var json = JSON.stringify(data);
+      }
+    }); 
+  });
+});
+/////////////////////////////////////////////////////
+$("#scodesbackfromcloud").click(function() {
+console.log("myvalue=",$(this).val()); 
+$.getJSON("https://api.jsonstorage.net/v1/json/"+clouduserid+"/"+scodeid + "?apiKey=" + apiid, function(posts) {
+    for (var i = 2; i < posts.queue.length; i++) {
+      console.log("myvalue=",posts.queue.length); 
+      $('input[cat="pp"]').each(function() {
+        var id = $(this).attr("id");
+        if (id == posts.queue[i].key) {
+          var value = posts.queue[i].name;
+          $(this).val(value);
+        }
+      });
+    }
+  });
+});
+/////////////////////////////////////////////////////
+$("#scodesbackfromcloudbkup").click(function() {
+console.log("myvalue=",$(this).val()); 
+$.getJSON("https://jsonblob.com/api/jsonBlob/923276921475973120", function(posts) {
+    for (var i = 2; i < posts.queue.length; i++) {
+      console.log("myvalue=",posts.queue.length); 
+      $('input[cat="pp"]').each(function() {
+        var id = $(this).attr("id");
+        if (id == posts.queue[i].key) {
+          var value = posts.queue[i].name;
+          $(this).val(value);
+        }
+      });
+    }
+  });
+});
+  ///////////////////////////////////////////////
+$("#savebaseqcode").click(function() {
+  var updatedObj = {
+    queue: [
+      { key: "1088", key2: "1088", name: "Banana" },
+      { key: "1099", key2: "1088", name: "Orange" }
+    ]
+  };
+  var updatedData = JSON.stringify(updatedObj);
+
+  // do update
+  // jsonblob.com/api/jsonBlob/039953ef-f791-11ea-b21d-9997b8aa99d2
+  // jsonstorage.net/api/items/85136854-aa6c-4932-acb2-44a761ed09d5
+  //    url: "https://api.jsonstorage.net/v1/json/00000000-0000-0000-0000-000000000000/010833c9-ba3e-4e09-a9ad-0a4a4a808e8f",
+  $.ajax({
+    url: "https://api.jsonstorage.net/v1/json/"+clouduserid+"/"+qcodeid + "?apiKey=" + apiid,
+    type: "PUT",
+    data: updatedData,
+    contentType: "application/json; charset=utf-8",
+    dataType: "json",
+    success: function(data, textStatus, jqXHR) {
+      var json = JSON.stringify(data);
+    }
+  });
+});
+////////
+$("#qcodesuptocloud").click(function() {
+  $.getJSON("https://api.jsonstorage.net/v1/json/"+clouduserid+"/"+qcodeid + "?apiKey=" + apiid, function(posts) {
+    // posts => LS
+    localStorage.setItem("lsposts", JSON.stringify(posts));
+
+    // LS => jsonArray
+    jsonArray2 = JSON.parse(localStorage.getItem("lsposts"));
+
+    // jsonArray2 += newjson
+    $('input[type="text"]').each(function() {
+      jsonArray2.queue.push({
+        key: $(this).attr("id"),
+        name: $(this).val(),
+        key2: "//"
+      });
+    });
+    // do update
+    $.ajax({
+      url: "https://api.jsonstorage.net/v1/json/"+clouduserid+"/"+qcodeid + "?apiKey=" + apiid,
+      type: "PUT",
+      data: JSON.stringify(jsonArray2),
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      success: function(data, textStatus, jqXHR) {
+        var json = JSON.stringify(data);
+      }
+    });
+  });
+});
+/////////////////////////////////////////////////////
+/////////////////////////////////////////////////////
+$("#qcodesbackfromcloud").click(function() {
+console.log("myvalue=",$(this).val()); 
+$.getJSON("https://api.jsonstorage.net/v1/json/"+clouduserid+"/"+qcodeid + "?apiKey=" + apiid, function(posts) {
+    for (var i = 2; i < posts.queue.length; i++) {
+      console.log("myvalue=",posts.queue.length); 
+      $('input[cat="pp"]').each(function() {
+        var id = $(this).attr("id");
+        if (id == posts.queue[i].key) {
+          var value = posts.queue[i].name;
+          $(this).val(value);
+        }
+      });
+    }
+  });
+});
+////////
+$("#uptocloudodds").click(function() {
+  var outputFieldOdds = document.getElementById("outputodds");
+  // do update
+  if (outputFieldOdds.value.length > 0) {
+    $.ajax({
+      url: "https://jsonblob.com/api/jsonBlob/435dc429-f208-11ea-9d5c-95817253fa1e",
+      type: "PUT",
+      data: outputFieldOdds.value,
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      success: function(data, textStatus, jqXHR) {
+        var json = JSON.stringify(data);
+      }
+    });
+  }
+});
+
+var currDate = new Date();
+var indexDate = 0,
+  bnText = ["DATEodd", "DATEdue", "DATEend"];
+
+$("#postUrl").on("click", function() {
+  $(this).text(function(indexDate, text) {
+    indexDate = $.inArray(text, bnText);
+
+    var urlField = document.getElementById("url");
+    switch (indexDate) {
+      case 0:
+        urlField.value =
+          "https://racing.hkjc.com/racing/information/chinese/Racing/JockeysRides.aspx?RaceDate=";
+        urlField.value = urlField.value + currDate.getFullYear() +""+ ("0" + (currDate.getMonth() +　1)).slice(-2) +""+  ("0" + currDate.getDate()).slice(-2);
+        break;
+      case 1:
+        urlField.value =
+          "https://racing.hkjc.com/racing/SystemDataPage/racing/ResultsAll-iframe-SystemDataPage.aspx?match_id=";
+        urlField.value = urlField.value + currDate.getFullYear() +""+ ("0" + (currDate.getMonth() +　1)).slice(-2) +""+  ("0" + currDate.getDate()).slice(-2);
+        break;
+      case 2:
+        urlField.value =
+          "https://racing.hkjc.com/racing/information/chinese/Racing/JockeysRides.aspx";
+        break;
+      default:
+        break;
+    }
+    return bnText[++indexDate % bnText.length];
+  });
+});
+
+////////
+$("#uptocloudinfo").click(function() {
+  var outputFieldOdds = document.getElementById("outputodds");
+  // do update
+  if (outputFieldOdds.value.length > 0) {
+    $.ajax({
+      url: "https://jsonblob.com/api/jsonBlob/884869025793064960",
+      type: "PUT",
+      data: outputFieldOdds.value,
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      success: function(data, textStatus, jqXHR) {
+        var json = JSON.stringify(data);
+      }
+    });
+  }
+});
+
+$("#infoall").on("click", function(e) {
+  var urlField = document.getElementById("url");
+  var dataField = document.getElementById("data");
+  var outputField = document.getElementById("output");
+  console.log("infoall inn>>");
+  outputField.value = '';
+  for (i = 0; i < 11; i++) {
+    e.preventDefault();
+    doCORSRequest(
+      {
+        method: "POST",
+        url: "http://hkhorsedb.com/cseh/cdecl" + (i+1) + ".php",
+//        url: "https://racing.hkjc.com/racing/Info/meeting/RaceCard/chinese/Local/20200205/HV/" + (i+1),
+        data: dataField.value
+      },
+      function printResult(result) {
+        outputField.value = outputField.value + result;
+      }
+    );
+  }
+});
+
+//year, month 0-11, date, hour, min (can add ,sec,msec)
+var eta_ms = new Date(2019, 12, 08, 12, 08).getTime() - Date.now();
+var timeout = setTimeout(function(){  $('#post').trigger('click');  }, eta_ms);
+var timeout = setTimeout(function(){  $('#button').trigger('click');  }, eta_ms+120000);
+var timeout = setTimeout(function(){  $('#uptocloud').trigger('click');  }, eta_ms+120000);
+  
+//year, month 0-11, date, hour, min (can add ,sec,msec)
+var eta_ms1 = eta_ms+1800000;
+var timeout = setTimeout(function(){  $('#post').trigger('click');  }, eta_ms1);
+var timeout = setTimeout(function(){  $('#button').trigger('click');  }, eta_ms1+120000);
+var timeout = setTimeout(function(){  $('#uptocloud').trigger('click');  }, eta_ms1+120000);
+  
+//year, month 0-11, date, hour, min (can add ,sec,msec)
+var eta_ms2 = new Date(2019, 12, 08, 13, 13).getTime() - Date.now();
+var timeout = setTimeout(function(){  $('#post').trigger('click');  }, eta_ms2);
+var timeout = setTimeout(function(){  $('#button').trigger('click');  }, eta_ms2+120000);
+var timeout = setTimeout(function(){  $('#uptocloud').trigger('click');  }, eta_ms2+120000);
+  
+//year, month 0-11, date, hour, min (can add ,sec,msec)
+var eta_ms3 = new Date(2019, 12, 08, 13, 48).getTime() - Date.now();
+var timeout = setTimeout(function(){  $('#post').trigger('click');  }, eta_ms3);
+var timeout = setTimeout(function(){  $('#button').trigger('click');  }, eta_ms3+120000);
+var timeout = setTimeout(function(){  $('#uptocloud').trigger('click');  }, eta_ms3+120000);
+  
+//year, month 0-11, date, hour, min (can add ,sec,msec)
+var eta_ms4 = new Date(2019, 12, 08, 14, 28).getTime() - Date.now();
+var timeout = setTimeout(function(){  $('#post').trigger('click');  }, eta_ms4);
+var timeout = setTimeout(function(){  $('#button').trigger('click');  }, eta_ms4+120000);
+var timeout = setTimeout(function(){  $('#uptocloud').trigger('click');  }, eta_ms4+120000);
+  
+//year, month 0-11, date, hour, min (can add ,sec,msec)
+var eta_ms5 = eta_ms4+2100000;
+var timeout = setTimeout(function(){  $('#post').trigger('click');  }, eta_ms5);
+var timeout = setTimeout(function(){  $('#button').trigger('click');  }, eta_ms5+120000);
+var timeout = setTimeout(function(){  $('#uptocloud').trigger('click');  }, eta_ms5+120000);
+  
+//year, month 0-11, date, hour, min (can add ,sec,msec)
+var eta_ms6 = eta_ms5+2100000;
+var timeout = setTimeout(function(){  $('#post').trigger('click');  }, eta_ms6);
+var timeout = setTimeout(function(){  $('#button').trigger('click');  }, eta_ms6+120000);
+var timeout = setTimeout(function(){  $('#uptocloud').trigger('click');  }, eta_ms6+120000);
+  
+//year, month 0-11, date, hour, min (can add ,sec,msec)
+var eta_ms7 = eta_ms6 + 2400000;
+var timeout = setTimeout(function(){  $('#post').trigger('click');  }, eta_ms7);
+var timeout = setTimeout(function(){  $('#button').trigger('click');  }, eta_ms7+120000);
+var timeout = setTimeout(function(){  $('#uptocloud').trigger('click');  }, eta_ms7+120000);
+  
+//year, month 0-11, date, hour, min (can add ,sec,msec)
+var eta_ms7 = eta_ms6 + 2100000;
+var timeout = setTimeout(function(){  $('#post').trigger('click');  }, eta_ms7);
+var timeout = setTimeout(function(){  $('#button').trigger('click');  }, eta_ms7+120000);
+var timeout = setTimeout(function(){  $('#uptocloud').trigger('click');  }, eta_ms7+120000);
+  
+//year, month 0-11, date, hour, min (can add ,sec,msec)
+var eta_ms7 = eta_ms6 + 2100000;
+var timeout = setTimeout(function(){  $('#post').trigger('click');  }, eta_ms7);
+var timeout = setTimeout(function(){  $('#button').trigger('click');  }, eta_ms7+120000);
+var timeout = setTimeout(function(){  $('#uptocloud').trigger('click');  }, eta_ms7+120000);
+</script>
