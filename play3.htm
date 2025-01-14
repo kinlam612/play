@@ -1,0 +1,3312 @@
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jChart 1.6 - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  
+  <!--script type="text/javascript" src="https://d14fo0winaifog.cloudfront.net/plotly-basic.js">/</script-->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/plotly.js/1.44.1/plotly-basic.js"></script>
+	
+  <link rel="stylesheet" href="/resources/demos/$tsx:fxstyle.css">
+
+  <!-- https://github.com/kangax/fabric.js/blob/master/dist/fabric.js -->
+  <!--script src="https://rawgit.com/kangax/fabric.js/master/dist/fabric.js"></script-->
+  <script src="https://rawgit.com/kangax/fabric.js/ff21b07be46796037ef89717773443920051acc2/dist/fabric.js"></script>
+  <script>
+  $(function() {
+    $( "#slider" ).slider();
+  });
+  </script>
+  <style>
+    div.xbox {
+    /* To correctly align image, regardless of content height: */
+    /* vertical-align: top; */
+    display: inline-block;
+    text-align:center;
+    color: blue;
+  }
+  </style>
+</head>
+<body>
+ 
+    <div id="bd-wrapper" ng-controller="CanvasControls">
+      <h2><span>Holistic !!</span> &middot; Standalone Controls</h2>
+
+      <style>
+  .controls { display: inline-block; background: #fafafa; margin-left: 10px; padding: 15px; border-left: 1px dotted #aaa; height: 170px }
+  .canvas-container { display: inline-block; vertical-align: top; }
+  canvas { border: 1px solid #eee !important }
+  label span { width: 50px; display: inline-block }
+  *[type=range] { poFtion: relative; top: 4px }
+  p:first-child { margin-top: 0 }
+  p:last-child { margin-bottom: 0 }
+</style>
+
+<canvas id="c" width="750" height="420" style="border:1px solid #ccc"></canvas>
+<div class="controls">
+  <p>
+    <!--label><span>Angle:</span> <input type="range" id="angle-control" value="0" min="-30" max="30"></label-->
+  </p>
+  <p>
+    <!--label><span>Left:</span> <input type="range" id="left-control" value="150" min="0" max="200"></label-->
+  </p>
+  <p>
+    <!--label><span>Top:</span> <input type="range" id="top-control" value="80" min="0" max="400"></label-->
+  </p>
+  <p>
+    <!--label><span>Scale:</span> <input type="range" id="scale-control" value="1" min="0.1" max="3" step="0.1"></label-->
+  </p>
+</div>
+<br />
+<br />
+<input type="button" value="Wonton =>" id="button_wonton" />
+<button id="buttonbb">Click to toggle background!</button> 
+<input type="button" value="Bdx =>" id="button_bdx" />
+<input type="button" value="Vwesx =>" id="button_vwesx" />
+<input type="button" value="Tsx =>" id="button_tsx" />
+<input type="button" value="Orcl =>" id="button_orcl" />
+<input type="button" value="Fdpix =>" id="button_fdpix" />
+<input type="button" value="Vexpx =>" id="button_vexpx" />
+<br />
+<br />
+<input id="text1" value="yang" style="width: 150px;" />
+<input type="button" value="Veiex <=" id="button_veiex" />
+<input type="button" value="Hsce <=" id="button_hsce" />
+<input type="button" value="Hs <=" id="button_hs" />
+<input type="button" value="Ewh <=" id="button_ewh" />
+<input type="button" value="AiaHaoEcns <=" id="button_hao" />
+<input type="button" value="asiax <=" id="button_asiax" />
+<br />
+__________<input type="button" value="Dax <=" id="button_dax" />
+<input type="button" value="Tcehy <=" id="button_tcehy" />
+<input type="button" value="cs300 <=" id="button_cs300" />
+<input type="button" value="eaL <=" id="button_eaL" />
+<input type="button" value="Gely <=" id="button_gely" />
+<input type="button" value="Fxp <=" id="button_usfxp" />
+<input type="button" value="Uxp <=" id="button_ulxp" />
+<input type="button" value="Dmcap <=" id="button_usmcap" />
+<input type="button" value="Russ <=" id="button_usruss" />
+
+	    
+<br />
+__________<input type="button" value="Bdx <=" id="button_r2bdx" />
+<input type="button" value="CuAu <=" id="button_cuau" />
+<input type="button" value="GeeBgne <=" id="button_GeeBgne" />
+<input type="button" value="GeeXBgne <=" id="button_GeeXBgne" />
+<input type="button" value="bgne <=" id="button_bgne" />
+<input type="button" value="Cgg <=" id="button_cgg" />
+<input type="button" value="Bp <=" id="button_bp" />
+<br />
+__________<select id="dropdown_change">
+ 
+      <option value="veiex">EM</option>
+
+      <option value="ea:$one:ea">eaL</option> 
+	
+      <option value="sark">sark</option> 
+	
+      <option value="ewh">ehk</option>
+ 
+      <option value="yao">ehkce</option>
+  
+      <option value="$nifty">indy</option>
+
+      <option value="asmiy">asm</option>
+      
+      <option value="ahchf">anhui</option> 
+      
+      <option value="pngay">ping</option>  
+
+      <option value="ppccy">picc</option>
+	    
+      <option value="kweb">web</option>    
+	    
+     <option value="frcoy">uniquo</option> 
+	    
+     <option value="ztcoy">zte</option> 
+	    
+      <option value="----">----</option>   
+	    
+      <option value="mpngf">meituan</option> 
+
+      <option value="baba:$one:tcehy">ATm</option> 
+	    
+      <option value="baba:$one:mpngf">AtM</option> 
+	    
+      <option value="baba">aliba</option> 
+	    
+      <option value="aacay">aac</option>   
+	    
+      <option value="sotgy">sunny</option>   
+	    
+      <option value="xpp">xp</option>   
+      <option value="----">----</option>   
+	    
+      <option value="gll">S-Gld</option>   
+	    
+      <option value="zsl">S-Slv</option> 
+	    
+</select>
+<br />
+__________<select id="dropdown_change1">
+ 
+      <option value="smicy">smi</option>
+	    
+      <option value="mlco">melco</option>
+ 
+      <option value="lvs">sands</option>
+ 
+      <option value="wynn">wynn</option>
+    
+      <option value="amzn">amazon</option>
+
+      <option value="goog">google</option>
+      
+      <option value="fb">fb</option>      
+
+      <option value="cichf">bankconst</option>
+      
+      <option value="bachf">bankchi</option>     
+	    
+      <option value="cihky">bankcmb</option>     
+	    
+      <option value="snp">386hk</option>
+      
+      <option value="afty">A50</option>      
+      
+      <option value="hkxcy">HKEx</option>
+      
+      <option value="byddy">BYD</option>
+      
+      <option value="yzcay">YZC</option> 
+      
+      <option value="ach">ALUM</option>       
+      
+
+</select>
+<br />
+__________<select id="dropdown_change2">
+ 
+      <option value="ACCD">--$$ACCD</option>
+
+      <option value="BGNE">--onc</option>
+
+      <option value="YCL">--L-YEN</option>
+
+      <option value="SMSEY">--SAMSON</option>
+
+      <option value="SHTDY">-- SinoPharm</option>
+
+      <option value="TMV">--TMV</option>
+
+      <option value="TYO">--TYO</option>
+
+	<option value="EGO">--EGO</option>
+
+	<option value="JDST">--JDST</option>
+
+	<option value="RMT">--RMT</option>
+	
+      <option value="BEAM">--$$BEAM</option>
+ 
+      <option value="INCY">--INCY</option>
+  
+      <option value="VEEV">--$$VEEV</option>
+
+      <option value="CDXS">--CDXS</option>
+      
+      <option value="TXG">--$$TXG</option> 
+	    
+      <option value="EXAS">--EXAS</option>
+
+      <option value="IONS">--IONS</option>
+      
+      <option value="TAK">--TAK</option> 
+</select>
+<br /> 
+<input type="text" value="empty" id="text4" nohidden=1 style="width: 390px;" />
+<br /> 
+<strong>4a</strong>
+<br /> 
+<strong>4b</strong>
+<br />
+<input type="checkbox" id="dia1" name="dia1" value="lunes" checked="checked"/>
+<label for="dia1">Lunes</label>
+<br />
+<br />
+<input type="button" value="Doup =>" id="button_doup" />
+<input type="button" value="LsDoup =>" id="button_lsdoup" />
+<input type="button" value="Post Won =>" id="button_post_won" />
+<input type="button" value="Reve =>" id="button_reve" />
+<input type="button" value="Pre Won =>" id="button_pre_won" />
+<input type="button" value="Pre Rdpix =>" id="button_pre_rdpix" />
+<input type="button" value="Pre Vexpx =>" id="button_pre_vexpx" />
+<input type="button" value="Pre Dax =>" id="button_pre_dax" />
+<input type="button" value="Pre TcehyGdm =>" id="button_pre_gdm" />
+<input type="button" value="Pre Cew/Orcl =>" id="button_pre_orcl" />
+<br />
+<input type="button" value="Pre Bdx =>" id="button_pre_bdx" />
+<button id="buttonbb1">Click to toggle background!</button>
+<input type="button" value="Pre Tsx =>" id="button_pre_tsx" />
+<input type="button" value="Pre Vwesx =>" id="button_pre_vwesx" />
+<input type="button" value="Pre Uup/Yield =>" id="button_pre_uup" />
+<input type="button" value="Click to toggle background!" id="buttonbb2" />
+
+<br />
+
+<br />
+<input type="button" value="Tail =>" id="button_tail" />      
+<input type="button" value="Cew(Vep)-Bdx =>" id="button_vb" style="background-color:lightgrey" />
+<input type="button" value="Vx-Tx-Ux =>" id="button_vut" style="background-color:lightgrey" />
+<input type="button" value="Rd-Fd =>" id="button_rf" style="background-color:lightgrey" />
+<input type="button" value="Tcy-Web2x =>" id="button_tw" style="background-color:lightgrey" />
+<input type="button" value="X<->Y =>" id="button_xy" style="background-color:lightgrey" />
+<input type="button" value="Long Tail =>" id="button_ltail" />
+<input type="button" value="Short Tail =>" id="button_stail" />
+<input type="button" value="Long Tail(W) =>" id="button_ltailw" />
+<input type="button" value="Bdx =>" id="button" />
+<input type="button" value="Web2x / udn =>" id="button_w2x" />
+<br />
+<input type="button" value="LsTail =>" id="button_lstail" />
+<button id="buttonbb3">Click to reverse background!</button>
+<input type="button" value="Click for more....!" id="buttonM" />
+<br />
+<br />
+<br />
+<input type="text" value="empty" id="text2" nohidden=1 style="width: 950px;" />
+
+<script id="main">(function() {
+  var canvas = this.__canvas = new fabric.Canvas('c', {
+        selection : false,
+        controlsAboveOverlay:true,
+        centeredScaling:true,
+        allowTouchScrolling: true
+    });
+  fabric.Object.prototype.transparentCorners = false;
+
+  var $ = function(id){return document.getElementById(id)};
+
+var line = new fabric.Line([7, 130, 500, 7], { 
+    selectable:false,
+  left: 100,
+  top: 263,
+  stroke: 'rgba(0,255,0,0.5)',
+  strokeWidth: 2,
+  angle: 14,
+  originX: 'left',
+  originY: 'bottom'
+});
+canvas.add(line);
+
+var text1 = document.getElementById('text1');
+var text4 = document.getElementById('text4');
+	
+var buttonbb = document.getElementById('buttonbb');
+buttonbb.addEventListener('click', function() {
+//    var url1='http://stockcharts.com/c-sc/sc?s=vwesx:cichf&p=D&&yr=7&i=0&a=168&r=0999';
+/*  var url1='http://stockcharts.com/c-sc/sc?s=$tsx:yao&p=D&&yr=7&i=0&a=168&r=0999';
+  var url2='bang';
+  if(canvas.backgroundColor != '#303030') {
+    var staticstring2 = "http://stockcharts.com/c-sc/sc?s=vfisx:bang&p=D&&yr=7&i=0&a=168&r=0999";
+    url2=staticstring2.replaceAll("bang", text1.value, true);
+    canvas.backgroundColor = '#303030';
+  }
+  else {
+    url2=url1; 
+    canvas.backgroundColor = '#003030';
+  }
+*/
+//  text1.value=url2;
+	
+    switch (canvas.backgroundColor) {
+        case '#013030':
+//	    url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=2318&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0;	
+		url2='http://stockcharts.com/c-sc/sc?s=qid&p=d&&yr=2&i=0&w=700&h=500r=0999';
+		url1='http://stockcharts.com/c-sc/sc?s=qid&p=w&&yr=13&i=0&w=700&h=500r=0999';		    
+		document.getElementById('text1').value="qid";
+		document.getElementById('text3').value="7261";
+		document.getElementById('text4a').value="7261";
+		document.getElementById('text4b').value="7522";
+	    canvas.backgroundColor = '#023030'
+            break;
+        case '#023030':
+//            url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=3968&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0;
+		url2='http://stockcharts.com/c-sc/sc?s=fxp&p=d&&yr=2&i=0&w=700&h=500r=0999';	    
+		url1='http://stockcharts.com/c-sc/sc?s=fxp&p=w&&yr=13&i=0&w=700&h=500r=0999';
+		document.getElementById('text1').value="fxp";
+		document.getElementById('text3').value="7200";
+		document.getElementById('text4a').value="7200";
+		document.getElementById('text4b').value="7500";
+	    canvas.backgroundColor = '#033030'
+            break;
+        case '#033030':
+//	    url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=7202&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0;
+		url2='http://stockcharts.com/c-sc/sc?s=$tsx:ewt&p=d&&yr=2&i=0&w=700&h=500r=0999';	    
+		url1='http://stockcharts.com/c-sc/sc?s=$tsx:ewt&p=w&&yr=13&i=0&w=700&h=500r=0999';
+		document.getElementById('text1').value="ewt";
+		document.getElementById('text3').value="7332";	
+		document.getElementById('text4a').value="7332";
+		document.getElementById('text4b').value="7232";
+	    canvas.backgroundColor = '#043030'
+            break;
+        case '#043030':
+//	    url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=175&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0;	    
+		url2='http://stockcharts.com/c-sc/sc?s=$vxn&p=d&&yr=2&i=0&w=700&h=500r=0999';	    
+		url1='http://stockcharts.com/c-sc/sc?s=$vxn&p=w&&yr=13&i=0&w=700&h=500r=0999';
+		document.getElementById('text1').value="$vxn";
+		document.getElementById('text3').value="7261";
+		document.getElementById('text4a').value="7261";
+		document.getElementById('text4b').value="7522";
+	    canvas.backgroundColor = '#053030'
+            break;
+        case '#053030':
+//	    url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=175&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0;	    
+		url2='http://stockcharts.com/c-sc/sc?s=tsla:byddy&p=d&&yr=2&i=0&w=700&h=500r=0999';	    
+		url1='http://stockcharts.com/c-sc/sc?s=tsla:byddy&p=w&&yr=9&i=0&w=700&h=500r=0999';
+		document.getElementById('text1').value="snptf";
+		document.getElementById('text3').value="2382";
+		document.getElementById('text4a').value="tsla";
+		document.getElementById('text4b').value="byddy";
+	    canvas.backgroundColor = '#063030'
+            break;
+        case '#063030':
+//	    url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=175&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0;	    
+		url2='http://stockcharts.com/c-sc/sc?s=bdx:$one:bdx:kure:$one:kure&p=d&&yr=2&i=0&w=700&h=500r=0999';	    
+		url1='http://stockcharts.com/c-sc/sc?s=bdx:$one:bdx:kure:$one:kure&p=w&&yr=9&i=0&w=700&h=500r=0999';
+		document.getElementById('text1').value="lly";
+		document.getElementById('text3').value="1801";
+		document.getElementById('text4a').value="lly";
+		document.getElementById('text4b').value="1801";
+	    canvas.backgroundColor = '#073030'
+            break;
+        case '#073030':
+//	    url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=522&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0;
+		url2='http://stockcharts.com/c-sc/sc?s=bdx:asmiy&p=D&height=410&width=560&yr=21&i=p40545395733&a=168&r=0999';
+		url2='http://stockcharts.com/c-sc/sc?s=$tsx:afty&p=d&&yr=2&i=0&w=700&h=500r=0999';
+		url1='http://stockcharts.com/c-sc/sc?s=$tsx:afty&p=d&&yr=7&i=0&w=700&h=500r=0999';
+		document.getElementById('text1').value="afty";
+		document.getElementById('text3').value="2823";
+		document.getElementById('text4a').value="afty";
+		document.getElementById('text4b').value="2823";
+	    canvas.backgroundColor = '#083030'
+            break;
+	case '#083030':
+//	    url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=2328&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0;
+		url2='http://stockcharts.com/c-sc/sc?s=uup:$tsx&p=d&&yr=2&i=0&w=700&h=500r=0999';
+		url1='http://stockcharts.com/c-sc/sc?s=uup:$tsx&p=w&&yr=13&i=0&w=700&h=500r=0999';
+		document.getElementById('text1').value="uup:$tsx";
+		document.getElementById('text3').value="7500";
+		document.getElementById('text4a').value="fcx";
+		document.getElementById('text4b').value="2899";
+	    canvas.backgroundColor = '#093030'
+            break;
+	case '#093030':
+//	    url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=2328&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0;
+		url2='http://stockcharts.com/c-sc/sc?s=$tsx:cgg.to&p=d&&yr=2&i=0&w=700&h=500r=0999';
+		url1='http://stockcharts.com/c-sc/sc?s=$tsx:cgg.to&p=w&&yr=13&i=0&w=700&h=500r=0999';
+		document.getElementById('text1').value="cgg.to";
+		document.getElementById('text3').value="2099";
+		document.getElementById('text4a').value="2099";
+		document.getElementById('text4b').value="2899";
+	    canvas.backgroundColor = '#0a3030'
+            break;
+	case '#0a3030':
+//	    url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=2328&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0;
+		url2='http://stockcharts.com/c-sc/sc?s=rdpix:$one:rdpix:cnxt:$one:ashs&p=d&&yr=2&i=0&w=700&h=500r=0999';
+		url1='http://stockcharts.com/c-sc/sc?s=rdpix:$one:rdpix:cnxt:$one:ashs&p=w&&yr=13&i=0&w=700&h=500r=0999';
+		document.getElementById('text1').value="ashs";
+		document.getElementById('text3').value="3188";
+		document.getElementById('text4a').value="7233";
+		document.getElementById('text4b').value="3147";
+	    canvas.backgroundColor = '#0b3030'
+            break;
+	case '#0b3030':
+//	    url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=2328&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0;
+		url2='http://stockcharts.com/c-sc/sc?s=bdx:$one:bdx:$one:bdx:baba:$one:tcehy&p=d&&yr=2&i=0&w=700&h=500r=0999';
+		url1='http://stockcharts.com/c-sc/sc?s=bdx:$one:bdx:$one:bdx:baba:$one:tcehy&p=w&&yr=13&i=0&w=700&h=500r=0999';
+		document.getElementById('text1').value="tcehy";
+		document.getElementById('text3').value="700";
+		document.getElementById('text4a').value="700";
+		document.getElementById('text4b').value="56713";
+	    canvas.backgroundColor = '#0c3030'
+            break;
+	case '#0c3030':
+//	    url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=2328&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0;
+		url2='http://stockcharts.com/c-sc/sc?s=gdx:cgg.to&p=d&&yr=2&i=0&w=700&h=500r=0999';
+		url1='http://stockcharts.com/c-sc/sc?s=gdx:cgg.to&p=w&&yr=13&i=0&w=700&h=500r=0999';
+		document.getElementById('text1').value="gdx";
+		document.getElementById('text3').value="2099";
+		document.getElementById('text4a').value="2099";
+		document.getElementById('text4b').value="gdx";
+	    canvas.backgroundColor = '#0d3030'
+            break;
+	case '#0d3030':
+//	    url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=2328&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0;
+		url2='http://stockcharts.com/c-sc/sc?s=$ndx:slv:$one:slv:cef&p=d&&yr=2&i=0&w=700&h=500r=0999';
+		url1='http://stockcharts.com/c-sc/sc?s=$ndx:$silver:$one:$silver:cef&p=w&&yr=33&i=0&w=700&h=500r=0999';
+		document.getElementById('text1').value="slv";
+		document.getElementById('text3').value="7299";
+		document.getElementById('text4a').value="slv";
+		document.getElementById('text4b').value="7299";
+	    canvas.backgroundColor = '#0e3030'
+            break;
+        default:
+//            url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=1299&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=pang";
+//	    text4.val(url1.replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+		url2='http://stockcharts.com/c-sc/sc?s=$INDIAVIX&p=d&&yr=2&i=0&w=700&h=500r=0999';
+		url1='http://stockcharts.com/c-sc/sc?s=$INDIAVIX&p=w&&yr=13&i=0&w=700&h=500r=0999';
+		document.getElementById('text1').value="$INDIAVIX";
+		document.getElementById('text3').value="7202";
+		document.getElementById('text4a').value="$INDIAVIX";
+		document.getElementById('text4b').value="7202";
+		    canvas.backgroundColor = '#013030'
+    }	
+	
+  canvas1.setBackgroundImage(url1, canvas1.renderAll.bind(canvas1), {
+    backgroundImageOpacity: 0.5,
+    backgroundImageStretch: false
+    });
+	
+  canvas.setBackgroundImage(url2, canvas.renderAll.bind(canvas), {
+    backgroundImageOpacity: 0.5,
+    backgroundImageStretch: false
+    });
+	
+}, false);
+		
+var buttonbb3 = document.getElementById('buttonbb3');
+buttonbb3.addEventListener('click', function() {
+	
+    switch (canvas.backgroundColor) {
+        case '#033030':
+//	    url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=2318&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0;	
+		url2='http://stockcharts.com/c-sc/sc?s=qid&p=d&&yr=2&i=0&w=700&h=500r=0999';
+		url1='http://stockcharts.com/c-sc/sc?s=qid&p=w&&yr=13&i=0&w=700&h=500r=0999';		    
+		document.getElementById('text1').value="qid";
+		document.getElementById('text3').value="7261";
+		document.getElementById('text4a').value="7261";
+		document.getElementById('text4b').value="7522";
+	    canvas.backgroundColor = '#023030'
+            break;
+        case '#043030':
+//            url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=3968&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0;
+		url2='http://stockcharts.com/c-sc/sc?s=fxp&p=d&&yr=2&i=0&w=700&h=500r=0999';	    
+		url1='http://stockcharts.com/c-sc/sc?s=fxp&p=w&&yr=13&i=0&w=700&h=500r=0999';
+		document.getElementById('text1').value="fxp";
+		document.getElementById('text3').value="7200";
+		document.getElementById('text4a').value="fxp";
+		document.getElementById('text4b').value="7500";
+	    canvas.backgroundColor = '#033030'
+            break;
+        case '#053030':
+//	    url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=7202&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0;
+		url2='http://stockcharts.com/c-sc/sc?s=$tsx:ewt&p=d&&yr=2&i=0&w=700&h=500r=0999';	    
+		url1='http://stockcharts.com/c-sc/sc?s=$tsx:ewt&p=w&&yr=13&i=0&w=700&h=500r=0999';
+		document.getElementById('text1').value="ewt";
+		document.getElementById('text3').value="7332";	
+		document.getElementById('text4a').value="7332";
+		document.getElementById('text4b').value="7232";
+	    canvas.backgroundColor = '#043030'
+            break;
+        case '#063030':
+//	    url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=175&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0;	    
+		url2='http://stockcharts.com/c-sc/sc?s=$vxn&p=d&&yr=2&i=0&w=700&h=500r=0999';	    
+		url1='http://stockcharts.com/c-sc/sc?s=$vxn&p=w&&yr=13&i=0&w=700&h=500r=0999';
+		document.getElementById('text1').value="$vxn";
+		document.getElementById('text3').value="7261";
+		document.getElementById('text4a').value="7261";
+		document.getElementById('text4b').value="7522";
+	    canvas.backgroundColor = '#053030'
+            break;
+        case '#073030':
+//	    url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=175&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0;	    
+//	    url1='http://stockcharts.com/c-sc/sc?s=ryccx:snptf&p=w&&yr=9&i=0&w=700&h=500r=0999';
+		url2='http://stockcharts.com/c-sc/sc?s=tsla:byddy&p=d&&yr=2&i=0&w=700&h=500r=0999';	    
+		url1='http://stockcharts.com/c-sc/sc?s=tsla:byddy&p=w&&yr=9&i=0&w=700&h=500r=0999';
+		document.getElementById('text1').value="snptf";
+		document.getElementById('text3').value="2382";
+		document.getElementById('text4a').value="tsla";
+		document.getElementById('text4b').value="byddy";
+	    canvas.backgroundColor = '#063030'
+            break;
+        case '#083030':
+//	    url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=175&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0;	    
+		url2='http://stockcharts.com/c-sc/sc?s=bdx:$one:bdx:kure:$one:kure&p=d&&yr=2&i=0&w=700&h=500r=0999';	    
+		url1='http://stockcharts.com/c-sc/sc?s=bdx:$one:bdx:kure:$one:kure&p=w&&yr=9&i=0&w=700&h=500r=0999';
+		document.getElementById('text1').value="snptf";
+		document.getElementById('text3').value="2382";
+		document.getElementById('text4a').value="lly";
+		document.getElementById('text4b').value="1801";
+	    canvas.backgroundColor = '#073030'
+            break;
+        case '#093030':
+//	    url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=522&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0;
+		url2='http://stockcharts.com/c-sc/sc?s=bdx:asmiy&p=D&height=410&width=560&yr=21&i=p40545395733&a=168&r=0999';
+		url2='http://stockcharts.com/c-sc/sc?s=$tsx:afty&p=d&&yr=2&i=0&w=700&h=500r=0999';
+		url1='http://stockcharts.com/c-sc/sc?s=$tsx:afty&p=d&&yr=7&i=0&w=700&h=500r=0999';
+		document.getElementById('text1').value="afty";
+		document.getElementById('text3').value="2823";
+		document.getElementById('text4a').value="afty";
+		document.getElementById('text4b').value="2823";
+	    canvas.backgroundColor = '#083030'
+            break;
+	case '#0a3030':
+//	    url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=2328&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0;
+		url2='http://stockcharts.com/c-sc/sc?s=uup:$tsx&p=d&&yr=2&i=0&w=700&h=500r=0999';
+		url1='http://stockcharts.com/c-sc/sc?s=uup:$tsx&p=w&&yr=13&i=0&w=700&h=500r=0999';
+		document.getElementById('text1').value="uup:$tsx";
+		document.getElementById('text3').value="7500";
+		document.getElementById('text4a').value="fcx";
+		document.getElementById('text4b').value="2899";
+	    canvas.backgroundColor = '#093030'
+            break;
+	case '#0b3030':
+//	    url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=2328&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0;
+		url2='http://stockcharts.com/c-sc/sc?s=$tsx:cgg.to&p=d&&yr=2&i=0&w=700&h=500r=0999';
+		url1='http://stockcharts.com/c-sc/sc?s=$tsx:cgg.to&p=w&&yr=13&i=0&w=700&h=500r=0999';
+		document.getElementById('text1').value="cgg.to";
+		document.getElementById('text3').value="2099";
+		document.getElementById('text4a').value="$tsx";
+		document.getElementById('text4b').value="2099";
+	    canvas.backgroundColor = '#0a3030'
+            break;
+	case '#0c3030':
+//	    url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=2328&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0;
+		url2='http://stockcharts.com/c-sc/sc?s=rdpix:$one:rdpix:cnxt:$one:ashs&p=d&&yr=2&i=0&w=700&h=500r=0999';
+		url1='http://stockcharts.com/c-sc/sc?s=rdpix:$one:rdpix:cnxt:$one:ashs&p=w&&yr=13&i=0&w=700&h=500r=0999';
+		document.getElementById('text1').value="ashs";
+		document.getElementById('text3').value="3188";
+		document.getElementById('text4a').value="7233";
+		document.getElementById('text4b').value="3147";
+	    canvas.backgroundColor = '#0b3030'
+            break;
+	case '#0d3030':
+//	    url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=2328&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0;
+		url2='http://stockcharts.com/c-sc/sc?s=bdx:$one:bdx:$one:bdx:baba:$one:tcehy&p=d&&yr=2&i=0&w=700&h=500r=0999';
+		url1='http://stockcharts.com/c-sc/sc?s=bdx:$one:bdx:$one:bdx:baba:$one:tcehy&p=w&&yr=13&i=0&w=700&h=500r=0999';
+		document.getElementById('text1').value="tcehy";
+		document.getElementById('text3').value="700";
+		document.getElementById('text4a').value="700";
+		document.getElementById('text4b').value="56713";
+	    canvas.backgroundColor = '#0c3030'
+            break;
+	case '#0e3030':
+//	    url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=2328&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0;
+		url2='http://stockcharts.com/c-sc/sc?s=gdx:cgg.to&p=d&&yr=2&i=0&w=700&h=500r=0999';
+		url1='http://stockcharts.com/c-sc/sc?s=gdx:cgg.to&p=w&&yr=13&i=0&w=700&h=500r=0999';
+		document.getElementById('text1').value="gdx";
+		document.getElementById('text3').value="2099";
+		document.getElementById('text4a').value="gdx";
+		document.getElementById('text4b').value="2099";
+	    canvas.backgroundColor = '#0d3030'
+            break;
+	case '#013030':
+//	    url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=2328&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0;
+		url2='http://stockcharts.com/c-sc/sc?s=$ndx:slv:$one:slv:cef&p=d&&yr=2&i=0&w=700&h=500r=0999';
+		url1='http://stockcharts.com/c-sc/sc?s=$ndx:$silver:$one:$silver:cef&p=w&&yr=33&i=0&w=700&h=500r=0999';
+		document.getElementById('text1').value="$ndx";
+		document.getElementById('text3').value="7299";
+		document.getElementById('text4a').value="slv";
+		document.getElementById('text4b').value="7299";
+	    canvas.backgroundColor = '#0e3030'
+            break;
+        default:
+//            url1="http://charts.megahubhk.com/servlets/MHImageChart?sid=1299&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=pang";
+//	    text4.val(url1.replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+		url2='http://stockcharts.com/c-sc/sc?s=$INDIAVIX&p=d&&yr=2&i=0&w=700&h=500r=0999';
+		url1='http://stockcharts.com/c-sc/sc?s=$INDIAVIX&p=w&&yr=13&i=0&w=700&h=500r=0999';
+		document.getElementById('text1').value="$INDIAVIX";
+		document.getElementById('text3').value="7202";
+		document.getElementById('text4a').value="$INDIAVIX";
+		document.getElementById('text4b').value="7202";
+		    canvas.backgroundColor = '#013030'
+    }	
+	
+  canvas1.setBackgroundImage(url1, canvas1.renderAll.bind(canvas1), {
+    backgroundImageOpacity: 0.5,
+    backgroundImageStretch: false
+    });
+	
+  canvas.setBackgroundImage(url2, canvas.renderAll.bind(canvas), {
+    backgroundImageOpacity: 0.5,
+    backgroundImageStretch: false
+    });
+	
+}, false);
+		
+		
+var button_tsx = document.getElementById('button_tsx');
+button_tsx.addEventListener('click', function() {
+
+    var url2='bang';
+
+    var staticstring2 = "http://stockcharts.com/c-sc/sc?s=$tsx:bang&p=D&&yr=7&i=0&a=168&r=0999";
+    url2=staticstring2.replaceAll("bang", text1.value, true);
+
+//  text1.value=url2;
+  canvas.setBackgroundImage(url2, canvas.renderAll.bind(canvas), {
+    backgroundImageOpacity: 0.5,
+    backgroundImageStretch: false
+    });
+}, false);
+
+var button_bdx = document.getElementById('button_bdx');
+button_bdx.addEventListener('click', function() {
+
+    var url2='bang';
+
+    var staticstring2 = "http://stockcharts.com/c-sc/sc?s=bdx:bang&p=D&&yr=7&i=0&a=168&r=0999";
+    url2=staticstring2.replaceAll("bang", text1.value, true);
+
+//  text1.value=url2;
+  canvas.setBackgroundImage(url2, canvas.renderAll.bind(canvas), {
+    backgroundImageOpacity: 0.5,
+    backgroundImageStretch: false
+    });
+}, false);
+		
+var button_vwesx = document.getElementById('button_vwesx');
+button_vwesx.addEventListener('click', function() {
+
+    var url2='bang';
+
+    var staticstring2 = "http://stockcharts.com/c-sc/sc?s=vwesx:bang&p=D&&yr=7&i=0&a=168&r=0999";
+    url2=staticstring2.replaceAll("bang", text1.value, true);
+
+//  text1.value=url2;
+  canvas.setBackgroundImage(url2, canvas.renderAll.bind(canvas), {
+    backgroundImageOpacity: 0.5,
+    backgroundImageStretch: false
+    });
+}, false);
+
+var button_orcl = document.getElementById('button_orcl');
+button_orcl.addEventListener('click', function() {
+
+    var url2='bang';
+
+    var staticstring2 = "http://stockcharts.com/c-sc/sc?s=orcl:bang&p=D&&yr=7&i=0&a=168&r=0999";
+    url2=staticstring2.replaceAll("bang", text1.value, true);
+
+//  text1.value=url2;
+  canvas.setBackgroundImage(url2, canvas.renderAll.bind(canvas), {
+    backgroundImageOpacity: 0.5,
+    backgroundImageStretch: false
+    });
+}, false);
+
+
+var button_wonton = document.getElementById('button_wonton');
+button_wonton.addEventListener('click', function() {
+
+    var url2='bang';
+
+    var staticstring2 = "http://stockcharts.com/c-sc/sc?chart=bang,uu[700,390]daclyyay[dj][pb50!b200!f]&r=3";
+    url2=staticstring2.replaceAll("bang", text1.value, true);
+
+//  text1.value=url2;
+  canvas.setBackgroundImage(url2, canvas.renderAll.bind(canvas), {
+    backgroundImageOpacity: 0.5,
+    backgroundImageStretch: false
+    });
+}, false);
+
+var button_fdpix = document.getElementById('button_fdpix');
+button_fdpix.addEventListener('click', function() {
+
+    var url2='bang';
+
+    var staticstring2 = "http://stockcharts.com/c-sc/sc?s=fdpix:bang&p=W&&yr=17&i=0&a=168&r=0999";
+    url2=staticstring2.replaceAll("bang", text1.value, true);
+
+//  text1.value=url2;
+  canvas.setBackgroundImage(url2, canvas.renderAll.bind(canvas), {
+    backgroundImageOpacity: 0.5,
+    backgroundImageStretch: false
+    });
+}, false);
+
+var button_vexpx = document.getElementById('button_vexpx');
+button_vexpx.addEventListener('click', function() {
+
+    var url2='bang';
+
+    var staticstring2 = "http://stockcharts.com/c-sc/sc?s=vexpx:bang&p=D&&yr=7&i=0&a=168&r=0999";
+    url2=staticstring2.replaceAll("bang", text1.value, true);
+
+//  text1.value=url2;
+  canvas.setBackgroundImage(url2, canvas.renderAll.bind(canvas), {
+    backgroundImageOpacity: 0.5,
+    backgroundImageStretch: false
+    });
+}, false);
+
+
+  var angleControl = $('angle-control');
+  angleControl.onchange = function() {
+//    line.setAngle(parseInt(this.value, 10)).setCoords();
+    line.angle=parseInt(this.value, 10);
+    line.setCoords();
+    canvas.renderAll();
+  };
+
+  var scaleControl = $('scale-control');
+  scaleControl.onchange = function() {
+    line.scale(parseFloat(this.value)).setCoords();
+    canvas.renderAll();
+  };
+
+  var topControl = $('top-control');
+  topControl.onchange = function() {
+    line.setTop(parseInt(this.value, 10)).setCoords();
+    canvas.renderAll();
+  };
+
+  var leftControl = $('left-control');
+  leftControl.onchange = function() {
+    line.setLeft(parseInt(this.value, 10)).setCoords();
+    canvas.renderAll();
+  };
+
+  function updateControls() {
+    scaleControl.value = line.getScaleX();
+    angleControl.value = line.getAngle();
+    leftControl.value = line.getLeft();
+    topControl.value = line.getTop();
+  };
+   canvas.on({
+    'object:moving': updateControls,
+    'object:scaling': updateControls,
+    'object:resizing': updateControls,
+    'object:rotating': updateControls
+  });
+
+
+
+})();
+</script>
+ 
+
+
+
+<div id="slider"></div>
+
+<canvas id="c1" width="750" height="420" style="border:1px solid #ccc"></canvas>
+
+<script>
+
+var canvas1 = new fabric.Canvas('c1', {
+        selection : false,
+        controlsAboveOverlay:true,
+        centeredScaling:true,
+        allowTouchScrolling: true
+    });
+
+
+
+var line = new fabric.Line([7, 130, 500, 7], {
+    selectable:false,
+  left: 10,
+  top: 140,
+  stroke: 'rgba(0,055,0,0.5)',
+  strokeWidth: 2,
+  angle: 14,
+  originX: 'left',
+  originY: 'bottom'
+});
+canvas1.add(line);
+
+canvas1.setBackgroundImage('http://stockcharts.com/c-sc/sc?chart=$hsi:$one:$ssec,uu[700,390]daclyyay[dk][pb50!b200!f]&r=3', canvas1.renderAll.bind(canvas1), {
+    backgroundImageOpacity: 0.5,
+    backgroundImageStretch: false
+});
+
+// select all text on click
+$('#text1').on('mouseup', function() { $(this).select(); });
+
+$('#button_veiex').on('click', function() {
+	if ($('#dia1').is(':checked') ) 
+		{ $('#text1').val("veiex"); } else 
+		{ $('#text1').val(text1.value +":"+"veiex"); }  });
+$('#button_asiax').on('click', function() {
+	if ($('#dia1').is(':checked') ) 
+		{ $('#text1').val("asiax"); } else 
+		{ $('#text1').val(text1.value +":"+"asiax"); }  });
+$('#button_hs').on('click', function() { 
+	if ($('#dia1').is(':checked') ) 
+		{ $('#text1').val("$hsi"); } else 
+		{ $('#text1').val(text1.value +":"+"$hsi"); }  });
+$('#button_hsce').on('click', function() { 
+	if ($('#dia1').is(':checked') ) 
+		{ $('#text1').val("$hscei"); } else 
+		{ $('#text1').val(text1.value +":"+"$hscei"); }  });
+$('#button_ewh').on('click', function() { 
+	if ($('#dia1').is(':checked') ) 
+		{ $('#text1').val("ewh"); } else 
+		{ $('#text1').val(text1.value +":"+"ewh"); }  });
+$('#button_hao').on('click', function() { 
+	if ($('#dia1').is(':checked') ) 
+		{ $('#text1').val("aagiy"); } else 
+		{ $('#text1').val(text1.value +":"+"aagiy"); }  });
+
+$('#button_dax').on('click', function() {
+	if ($('#dia1').is(':checked') ) 
+		{ $('#text1').val("$dax"); } else 
+		{ $('#text1').val(text1.value +":"+"$dax"); }  });
+$('#button_tcehy').on('click', function() { 
+	if ($('#dia1').is(':checked') ) 
+		{ $('#text4').val("tcehy"); } else 
+		{ $('#text4').val(text4.value +":"+"tcehy"); }  });
+$('#button_eaL').on('click', function() { 
+	if ($('#dia1').is(':checked') ) 
+		{ $('#text1').val("ea" +":"+"$one"+":"+"ea"); } else 
+		{ $('#text1').val(text1.value +":"+"ea" +":"+"$one"+":"+"ea"); }  });
+$('#button_cs500').on('click', function() { 
+	if ($('#dia1').is(':checked') ) 
+		{ $('#text1').val("ashs"); } else 
+		{ $('#text1').val(text1.value +":"+"ashs"); }  });
+$('#fbd').on('click', function() {
+	if ($('#dia1').is(':checked') ) 
+		{ $('#text1').val("$xbd"); } else 
+		{ $('#text1').val(text1.value +":"+"$xbd"); }  });
+$('#button_gely').on('click', function() { 
+	if ($('#dia1').is(':checked') ) 
+		{ $('#text1').val("gelyf"); } else 
+		{ $('#text1').val(text1.value +":"+"gelyf"); }  });
+$('#button_usfxp').on('click', function() { 
+	if ($('#dia1').is(':checked') ) 
+		{ $('#text1').val("fxp"); } else 
+		{ $('#text1').val(text1.value +":"+"fxp"); }  });
+$('#button_ulxp').on('click', function() { 
+	if ($('#dia1').is(':checked') ) 
+		{ $('#text1').val("xpp"); } else 
+		{ $('#text1').val(text1.value +":"+"xpp"); }  });
+$('#button_usmcap').on('click', function() { 
+	if ($('#dia1').is(':checked') ) 
+		{ $('#text1').val("uipix"); } else 
+		{ $('#text1').val(text1.value +":"+"uipix"); }  });
+$('#button_usruss').on('click', function() { 
+	if ($('#dia1').is(':checked') ) 
+		{ $('#text1').val("iwm"); } else 
+		{ $('#text1').val(text1.value +":"+"iwm"); }  });
+	
+$('#button_r2bdx').on('click', function() { 
+	if ($('#dia1').is(':checked') ) 
+		{ $('#text1').val("bdx"); } else 
+		{ $('#text1').val(text1.value +":"+"bdx"); }  });
+$('#button_cuau').on('click', function() { 
+	if ($('#dia1').is(':checked') ) 
+		{ $('#text1').val("$copper:cef"); } else 
+		{ $('#text1').val(text1.value +":"+"$copper:cef"); }  });
+$('#button_GeeBgne').on('click', function() { 
+	if ($('#dia1').is(':checked') ) 
+		{ $('#text1').val("GELYF:onc"); } else 
+		{ $('#text1').val(text1.value +":"+"GELYF:onc"); }  });
+$('#button_GeeXBgne').on('click', function() {
+	if ($('#dia1').is(':checked') ) 
+		{ $('#text1').val("GELYF:$one:onc"); } else 
+		{ $('#text1').val(text1.value +":"+"GELYF:$one:onc"); }  });
+$('#button_bgne').on('click', function() {
+	if ($('#dia1').is(':checked') ) 
+		{ $('#text4').val("onc"); } else 
+		{ $('#text4').val(text4.value +":"+"onc"); }  });
+$('#button_cgg').on('click', function() { $('#text1').val("jinff"); });
+$('#button_bp').on('click', function() { $('#text1').val("$xbp"); });
+
+$('#buttonbb1').on('click', function() { $('#buttonbb').click(); });
+$('#buttonbb2').on('click', function() { $('#buttonbb').click(); });
+// $('#buttonbb3').on('click', function() { $('#buttonbb').click(); });
+
+	
+$('#buttonM').click(function(){ $('#button_tw').click();
+				     $('#buttonxx').click();
+				     });
+	
+$("#dropdown_change").change(function(){
+      dc=document.getElementById("dropdown_change")
+	if ($('#dia1').is(':checked') ) 
+		{ $('#text1').val(dc.value); } else 
+		{ $('#text1').val(text1.value +":"+dc.value); } 
+});
+
+$("#dropdown_change1").change(function(){
+      dc=document.getElementById("dropdown_change1")
+	if ($('#dia1').is(':checked') ) 
+		{ $('#text1').val(dc.value); } else 
+		{ $('#text1').val(text1.value +":"+dc.value); }
+});
+	
+$("#dropdown_change2").change(function(){
+      dc=document.getElementById("dropdown_change2")
+	if ($('#dia1').is(':checked') ) 
+		{ $('#text4').val(dc.value); } else 
+		{ $('#text4').val(text4.value +":"+dc.value); }
+});
+  
+$('#button_doup').on('click', function() { $('#text1').val(text1.value+":"+"$one"+":"+text1.value); });
+$('#button_lsdoup').on('click', function() { $('#text4').val(text4.value+":"+"$one"+":"+text4.value); });
+$('#button_post_won').on('click', function() { $('#text1').val(text1.value+":$one"); });
+$('#button_reve').on('click', function() { $('#text1').val(text1.value.split(/:/)[0]); });
+$('#button_pre_won').on('click', function() { $('#text1').val("$one"+":"+text1.value); });
+$('#button_pre_rdpix').on('click', function() { $('#text1').val("rdpix"+":"+text1.value); });
+$('#button_pre_vexpx').on('click', function() { $('#text1').val("vexpx"+":"+text1.value); });
+$('#button_pre_dax').on('click', function() { $('#text1').val("$dax"+":"+text1.value); });
+$('#button_pre_gdm').on('click', function() { $('#text1').val("tcehy"+":"+text1.value); });
+$('#button_pre_orcl').on('click', function() { $('#text1').val("cew"+":"+text1.value); });
+
+
+
+$('#button_pre_bdx').on('click', function() { $('#text1').val("bdx"+":"+text1.value); });
+$('#button_pre_tsx').on('click', function() { $('#text1').val("$tsx"+":"+text1.value); });
+$('#button_pre_vwesx').on('click', function() { $('#text1').val("vwesx"+":"+text1.value); });
+$('#button_pre_uup').on('click', function() { $('#text1').val("!yldspx"+":"+text1.value); });
+
+$('#button').on('click', function () {
+//        var text = $('#text');
+        var text2 = $('#text2');
+//        var staticstring = "http://stockcharts.com/def/servlet/SharpChartv05.ServletDriver?chart=vwesx:bang,uu[l,a]daclyyay[d20070801][pb50!b100!f][vc60][iul14!xx12,26,9]&a=168&r=0999";
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=bdx:bang&p=D&&yr=10&i=0&a=168&r=0999";
+        
+        
+        text2.val(staticstring2.replaceAll("bang", text1.value, true));
+
+        canvas1.setBackgroundImage(text2.val(), canvas1.renderAll.bind(canvas1), {
+    backgroundImageOpacity: 0.5,
+    backgroundImageStretch: false
+    });
+
+});
+
+$('#button_w2x').on('click', function () {
+        var text2 = $('#text2');
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=udn:bang&p=W&&yr=6&i=0&a=168&r=0999";
+        
+        
+        text2.val(staticstring2.replaceAll("bang", text1.value, true));
+
+        canvas1.setBackgroundImage(text2.val(), canvas1.renderAll.bind(canvas1), {
+    backgroundImageOpacity: 0.5,
+    backgroundImageStretch: false
+    });
+
+});
+  
+$('#button_stail').on('click', function () {
+        var text2 = $('#text2');
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=bang&p=D&&yr=9&i=0&a=168&r=0999";
+        
+        
+        text2.val(staticstring2.replaceAll("bang", text1.value, true));
+
+        canvas1.setBackgroundImage(text2.val(), canvas1.renderAll.bind(canvas1), {
+    backgroundImageOpacity: 0.5,
+    backgroundImageStretch: false
+    });
+
+});
+
+$('#button_ltail').on('click', function () {
+        var text2 = $('#text2');
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=bang&p=D&&yr=14&i=0&a=168&r=0999";
+        
+        
+        text2.val(staticstring2.replaceAll("bang", text1.value, true));
+
+        canvas1.setBackgroundImage(text2.val(), canvas1.renderAll.bind(canvas1), {
+    backgroundImageOpacity: 0.5,
+    backgroundImageStretch: false
+    });
+
+});
+
+$('#button_ltailw').on('click', function () {
+        var text2 = $('#text2');
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=bang&p=W&&yr=16&i=0&a=168&r=0999";
+        
+        
+        text2.val(staticstring2.replaceAll("bang", text1.value, true));
+
+        canvas1.setBackgroundImage(text2.val(), canvas1.renderAll.bind(canvas1), {
+    backgroundImageOpacity: 0.5,
+    backgroundImageStretch: false
+    });
+
+});  
+  
+$('#button_tail').on('click', function () {
+        var text2 = $('#text2');
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=bang&p=D&b=1&g=0&i=0&a=168&r=0999";
+        
+        
+        text2.val(staticstring2.replaceAll("bang", text1.value, true));
+
+        canvas1.setBackgroundImage(text2.val(), canvas1.renderAll.bind(canvas1), {
+    backgroundImageOpacity: 0.5,
+    backgroundImageStretch: false
+    });
+
+});  
+  
+$('#button_lstail').on('click', function () {
+        var text2 = $('#text2');
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=bang&p=D&b=1&g=0&i=0&a=168&r=0999";
+        
+        
+        text2.val(staticstring2.replaceAll("bang", text4.value, true));
+
+        canvas1.setBackgroundImage(text2.val(), canvas1.renderAll.bind(canvas1), {
+    backgroundImageOpacity: 0.5,
+    backgroundImageStretch: false
+    });
+
+});
+
+String.prototype.replaceAll = function (strTarget, strSubString, caseSensitive) {
+    var strText = this;
+    strText = strText.replace(new RegExp(strTarget, 'g'), strSubString); //replace globally and case sensitive
+
+    return (strText);
+};
+/////////////
+
+</script>
+<br />
+	    
+<br />
+    TSX
+    <input type='button' value='-' id='tsx1_minus'  />
+    <input type='text' id='tsx1_current' value='7.8'/>
+    <input type='button' value='+' id='tsx1_plus'  />
+<br />
+    PARAM
+    <input type='button' value='-' id='param1_minus'  />
+    <input type='text' id='param1_current' value='9.75' />
+    <input type='button' value='+' id='param1_plus' />
+    
+    <input type='button' value='param1' id='button_param1' />
+    <input type='text' id='param1_calc' value='0.64' />
+<br />
+	    
+<br />
+    TSX
+    <input type='button' value='-' id='tsx_minus'  />
+    <input type='text' id='tsx_current' value='12900'/>
+    <input type='button' value='+' id='tsx_plus'  />
+<br />
+    PARAM
+    <input type='button' value='-' id='param_minus'  />
+    <input type='text' id='param_current' value='19000' />
+    <input type='button' value='+' id='param_plus' />
+    
+    <input type='button' value='param' id='button_param' />
+    <input type='text' id='param_calc' value='0.64' />
+<br />
+<div class="container my-4">
+  <form class="form-inline" onsubmit="return validate(this);">
+
+    <!-- skin 6 -->
+    <div class="num-block skin-6">
+      <div class="num-in">
+        <span class="minus dis">-</span>
+        <input type="text" name="price" class="in-num" value="1" readonly="">
+
+        <span class="plus">+</span>
+      </div>
+    </div>
+    <!-- / skin 6 -->
+
+    <!-- skin 7 -->
+    <div class="num-block skin-7">
+      <div class="num-in">
+        <span class="minus dis">-</span>
+        <input type="text" name="price1" class="in-num" value="1" readonly="">
+        <span class="plus">+</span>
+      </div>
+    </div>
+    <!-- / skin 7 -->
+    <button type="submit" class="btn btn-secondary">Submit</button>
+  </form>
+
+  <pre id="output" class="my-2 p-2 text-black invisible"></pre>
+</div>
+	    
+    <hr style="width:800px; height:0px; margin-left:0px;"/>
+<input type="button" value="Gee-Bgne =>" id="button_Gee_Bgne" style="background-color:lightgrey" />
+<input type="button" value="Bab-Mei =>" id="button_Bab_Mei" style="background-color:lightgrey" />
+<input type="button" value="Cei-Aig =>" id="button_Cei_Aig" style="background-color:lightgrey" />
+<input type="button" value="Dax-Sz =>" id="button_Dax_Sz" style="background-color:lightgrey" />
+<br />
+<input type="button" value="Kur-Bdx =>" id="button_Kur_Bdx" style="background-color:lightgrey" />
+<input type="button" value="Atm-Bdx =>" id="button_Atm_Bdx" style="background-color:lightgrey" />
+<br />
+<input type="button" value="Tcy-Gee =>" id="button_Tcy_Gee" style="background-color:lightgrey" />
+<input type="button" value="Aig-Png =>" id="button_Aig_Png" style="background-color:lightgrey" />
+<br />
+<div id="sector_sc_watch">	
+    <input type="button" id="race1Q" cat="pksc" value="ppp...kkk" />
+    <input type="button" id="race2Q" cat="pksc" value="ppp...kkk" />
+    <input type="button" id="race3Q" cat="pksc" value="ppp...kkk" />
+    <input type="button" id="race4Q" cat="pksc" value="ppp...kkk" />
+    <input type="button" id="race5Q" cat="pksc" value="ppp...kkk" />
+    <input type="button" id="race6Q" cat="pksc" value="ppp...kkk" />
+    <input type="button" id="race7Q" cat="pksc" value="ppp...kkk" />
+    <input type="button" id="race8Q" cat="pksc" value="ppp...kkk" />
+    <input type="button" id="race9Q" cat="pksc" value="ppp...kkk" />
+    <input type="button" id="race10Q" cat="pksc" value="ppp...kkk" />
+    <input type="button" id="race11Q" cat="pksc" value="ppp...kkk" />
+</div>  
+<br />
+  <button id="scpairsfromcloud">dnload sc pairs fm cloud</button> 
+<br />   
+<br />   
+<div id="sector_jsc_watch">	
+    <input type="button" id="race1J" cat="pkjsc" value="ppp...kkk" />
+    <input type="button" id="race2J" cat="pkjsc" value="ppp...kkk" />
+    <input type="button" id="race3J" cat="pkjsc" value="ppp...kkk" />
+    <input type="button" id="race4J" cat="pkjsc" value="ppp...kkk" />
+<br />
+    <input type="button" id="race5J" cat="pkjsc" value="ppp...kkk" />
+    <input type="button" id="race6J" cat="pkjsc" value="ppp...kkk" />
+    <input type="button" id="race7J" cat="pkjsc" value="ppp...kkk" />
+    <input type="button" id="race8J" cat="pkjsc" value="ppp...kkk" />
+<br />
+    <input type="button" id="race9J" cat="pkjsc" value="ppp...kkk" />
+    <input type="button" id="race10J" cat="pkjsc" value="ppp...kkk" />
+    <input type="button" id="race11J" cat="pkjsc" value="ppp...kkk" />
+<hr style="width:800px; height:0px; margin-left:0px;"/>
+    <input type="button" id="race1T" cat="pkjsc" value="ppp...kkk" />
+    <input type="button" id="race2T" cat="pkjsc" value="ppp...kkk" />
+    <input type="button" id="race3T" cat="pkjsc" value="ppp...kkk" />
+    <input type="button" id="race4T" cat="pkjsc" value="ppp...kkk" />
+<br />
+    <input type="button" id="race5T" cat="pkjsc" value="ppp...kkk" />
+    <input type="button" id="race6T" cat="pkjsc" value="ppp...kkk" />
+    <input type="button" id="race7T" cat="pkjsc" value="ppp...kkk" />
+    <input type="button" id="race8T" cat="pkjsc" value="ppp...kkk" />
+<br />
+    <input type="button" id="race9T" cat="pkjsc" value="ppp...kkk" />
+    <input type="button" id="race10T" cat="pkjsc" value="ppp...kkk" />
+    <input type="button" id="race11T" cat="pkjsc" value="ppp...kkk" />
+<hr style="width:800px; height:0px; margin-left:0px;"/>
+    <input type="button" id="race1F" cat="pkjsc" value="ppp...kkk" />
+    <input type="button" id="race2F" cat="pkjsc" value="ppp...kkk" />
+    <input type="button" id="race3F" cat="pkjsc" value="ppp...kkk" />
+    <input type="button" id="race4F" cat="pkjsc" value="ppp...kkk" />
+<br />
+    <input type="button" id="race5F" cat="pkjsc" value="ppp...kkk" />
+    <input type="button" id="race6F" cat="pkjsc" value="ppp...kkk" />
+    <input type="button" id="race7F" cat="pkjsc" value="ppp...kkk" />
+    <input type="button" id="race8F" cat="pkjsc" value="ppp...kkk" />
+<br />
+    <input type="button" id="race9F" cat="pkjsc" value="ppp...kkk" />
+    <input type="button" id="race10F" cat="pkjsc" value="ppp...kkk" />
+    <input type="button" id="race11F" cat="pkjsc" value="ppp...kkk" />
+</div>  
+<br />
+  <button id="scjpairsfromcloud">dnload sc co pairs fm cloud</button> 
+<br />  
+<script>
+    $('#tsx_plus').on('click', function() { $('#tsx_current').val(parseInt($('#tsx_current').val()) + 100); });
+    $('#tsx_minus').on('click', function() { $('#tsx_current').val(parseInt($('#tsx_current').val()) - 100); });
+    $('#param_plus').on('click', function() { $('#param_current').val(parseInt($('#param_current').val()) + 100); });
+    $('#param_minus').on('click', function() { $('#param_current').val(parseInt($('#param_current').val()) - 100); });
+    
+    $('#button_param').on('click', function() { $('#param_calc').val(parseFloat(parseInt($('#tsx_current').val()) / parseInt($('#param_current').val())).toFixed(3)); });
+
+/////// codepen.io/dmondma/pen/OJPpWwY ////////
+$("#tsx1_plus").on("click", function () {
+  $("#tsx1_current").val(parseFloat($("#tsx1_current").val()) + 0.025);
+  $("#tsx1_current").val(parseFloat($("#tsx1_current").val()).toFixed(3));
+});
+$("#tsx1_minus").on("click", function () {
+  $("#tsx1_current").val($("#tsx1_current").val() - 0.025);
+  $("#tsx1_current").val(parseFloat($("#tsx1_current").val()).toFixed(3));
+});
+$("#param1_plus").on("click", function () {
+  $("#param1_current").val(parseFloat($("#param1_current").val()) + 0.025);
+  $("#param1_current").val(parseFloat($("#param1_current").val()).toFixed(3));
+});
+$("#param1_minus").on("click", function () {
+  $("#param1_current").val($("#param1_current").val() - 0.025);
+  $("#param1_current").val(parseFloat($("#param1_current").val()).toFixed(3));
+});
+
+$("#button_param1").on("click", function () {
+  $("#param1_calc").val(
+    ($("#tsx1_current").val() / $("#param1_current").val()).toFixed(3)
+  );
+});
+
+</script>
+
+<br />
+    <img id="img_dual" src="http://stockcharts.com/c-sc/sc?s=$gold:$one:cnxt&p=w&yr=9&i=0"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+    <img id="img_dualplus" src="http://stockcharts.com/c-sc/sc?chart=$silver:cnxt,uu[460,a]wallyyay[dl][pb50!b200!f]&amp;r=0998" alt="Kenny g Breathless" border="0" height="550" width="550">
+
+    <hr style="width:800px; height:0px; margin-left:0px;">
+    
+<br />
+    <img id="img_dual_raw" src="http://stockcharts.com/c-sc/sc?chart=gld:cnxt,uu[460,a]daclyyay[dl][pb50!b200!f]&amp;r=09981" alt="Kenny g Breathless" border="0" height="400" width="440">
+        
+    <img id="img_dual++" src="http://stockcharts.com/c-sc/sc?chart=gld:$one:cnxt,uu[460,a]daclyyay[dl][pb50!b200!f]&amp;r=0998" alt="Kenny g Breathless" border="0" height="400" width="440">
+<br />
+______________________________________<input type="text" value="empty" id="text4a" nohidden=1 style="width: 190px;" />
+<br /> 
+______________________________________<input type="text" value="empty" id="text4b" nohidden=1 style="width: 190px;" />
+<br /> 
+<br />
+______________________________________<input type="button" value="X<->Y =>" id="button_xy_1" style="background-color:lightgrey" />
+<br />
+    <img id="img_dual+++" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1772&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=46" alt="Kenny g Breathless" border="0" height="400" width="440">
+
+    <img id="img_dual--" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1772&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&p=30" alt="Kenny g Breathless" border="0" height="400" width="440">
+
+    <img src="http://stockcharts.com/c-sc/sc?s=$hsi:$one:$ssec&p=w&yr=23&a=66&i=t9214843807c" alt="Kenny g Breathless" border="0" height="400" width="440">
+    
+    <img src="http://charts.megahubhk.com/servlets/MHImageChart?sid=7299&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&p=30" alt="Kenny g Breathless" border="0" height="400" width="440">
+
+	    
+    <hr style="width:800px; height:0px; margin-left:0px;">
+    
+    
+<br />
+<input id="text3" value="0388" style="width: 150px;" />  
+<input type="button" value="2328 <=" id="button_2328" />
+<input type="button" value="2318 <=" id="button_2318" />
+<input type="button" value="700 <=" id="button_700" />
+<input type="button" value="1299 <=" id="button_1299" />
+<input type="button" value="3046 <=" id="button_3046" />
+<br />
+___________<input type="button" value="425 <=" id="button_425" />
+<input type="button" value="1999 <=" id="button_1999" />
+<input type="button" value="362 <=" id="button_362" />
+<input type="button" value="338/2099 <=" id="button_338" />
+<input type="button" value="1099 <=" id="button_1099" />
+<input type="button" value="133 <=" id="button_133" />
+<br />
+<input id="text3a" value="0388" style="width: 150px;" />  ______<input type="button" value="175 <=" id="button_175" />
+<input type="button" value="397 <=" id="button_397" />
+<input type="button" value="1818 <=" id="button_1818" />
+<input type="button" value="927 <=" id="button_927" />
+<input type="button" value="1083 <=" id="button_1083" />
+<input type="button" value="2314 <=" id="button_2314" />
+<br />
+__________<select id="dropdown">
+</select>
+<input type="button" value="3066/68 <=" id="button_bitc" />
+<input type="button" value="2593/2633 <=" id="button_ipo" />
+<input type="button" value="2400/1318 <=" id="button_2024econ" />
+<input type="button" value="1980 <=" id="button_1980" />
+<input type="button" value="3709 <=" id="button_3709" />
+<input type="button" value="607 <=" id="button_607" />
+<input type="button" value="8207 <=" id="button_8207" />
+
+<br />
+<input type="button" value="285 <=" id="button_285" />(12/8/15)
+<input type="button" value="611 <=" id="button_611" />(12/3/15)
+<input type="button" value="419 <=" id="button_419" />(12/1/15)
+
+<br />
+<input type="button" value="1833 <=" id="button_1833" />
+<input type="button" value="3147 <=" id="button_3147" />
+<input type="button" value="3165 <=" id="button_3165" />
+<br />
+_____c______<input type="button" value="59789 <=" id="button_call11" />
+<input type="button" value="68309 <=" id="button_call12" />
+<br />
+_____p______<input type="button" value="62836 <=" id="button_put11" />
+<input type="button" value="64059 <=" id="button_put12" />
+<br />
+___________<input type="button" value="VHSI <=" id="button_vhsi" />
+___________<input type="button" value="Gee-Bgne <=" id="button_call" />
+<input type="button" value="Bab-Mei <=" id="button_put" />
+<br />
+___________<input type="button" value="Click Me" id="buttonxx" />
+___________<input type="button" value="Cei-Aig <=" id="button_call1" />
+<input type="button" value="Dax-Sz <=" id="button_put1" />
+<br />
+___________ ___________
+___________<input type="button" value="6806... <=" id="button_call2" />
+<input type="button" value="1801... <=" id="button_put2" />
+<br />
+<div id="sector_watch">	
+    <input type="button" id="race1K" cat="pk" value="ppp...kkk" />
+    <input type="button" id="race2K" cat="pk" value="ppp...kkk" />
+    <input type="button" id="race3K" cat="pk" value="ppp...kkk" />
+    <input type="button" id="race4K" cat="pk" value="ppp...kkk" />
+    <input type="button" id="race5K" cat="pk" value="ppp...kkk" />
+    <input type="button" id="race6K" cat="pk" value="ppp...kkk" />
+    <input type="button" id="race7K" cat="pk" value="ppp...kkk" />
+    <input type="button" id="race8K" cat="pk" value="ppp...kkk" />
+</div>  
+<br />
+  <button id="pairsfromcloud">dnload pairs fm cloud</button> 
+<br />
+<br />
+<br />
+<br />
+source: <a href="http://webb-site.com/dbpub/orgdata.asp?code=1561">1561</a>
+: <a href="http://portfolios.morningstar.com/fund/holdings?&t=ecns">Holdings</a>
+: <a href="http://investors.morningstar.com/ownership/shareholders-overview.html?t=02314&region=HKG&culture=en_US">Held by</a>
+: <a href="https://www.aastocks.com/tc/stocks/news/aamm/aamm-all-category/0/03823/1">Big Lot</a>
+: <a href="http://www.aastocks.com/tc/stocks/analysis/stock-short-selling-ratio.aspx?symbol=01193">Short Ratio</a>
+<br />
+
+<div id="sector_front">	
+______<button>Click Mee</button>_____________________________________________<button>Click Mee</button>
+
+<br />
+
+
+    <br>
+<img id="imgbb" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1988&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="imgbb_plus" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1988&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<br />
+<img id="imgbb3" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=VHSI&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="imgbb4" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=VHSI&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<br />	
+______<button>Click Mee</button>_____________________________________________<button>Click Me</button>
+<br />
+	
+<br />
+<img id="imgbb_plus1" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1988&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010500&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="imgbb_plus2" src="https://charts.aastocks.com/servlet/Charts?fontsize=12&15MinDelay=T&lang=1&titlestyle=1&vol=1&Indicator=1&indpara1=10&indpara2=20&indpara3=50&indpara4=100&indpara5=150&subChart1=11&ref1para1=14&ref1para2=0&ref1para3=0&scheme=1&com=100&chartwidth=595&chartheight=480&stockid=1988.HK&period=2060&type=1&" alt="Kenny g Breathless" width="440" height="400" border="0">
+
+
+	    
+<br />
+<table style="width: 50%; table-layout:fixed; font-size: 11px;">
+ 
+<tbody> 
+  <tr> <td style="width: 165px">截止日期</td> <td style="width: 87px">2013/12(Feb)</td> <td>2014/12</td> <td>2015/12</td> <td>2016/12</td> <td>2017/12</td> <td>2018/12</td> <td>2019/12</td>  
+    
+  <tr> <td style="width: 165px; ">除稅及股息後盈利</td> <td style="color:red">-74,531</td> <td>265,253</td> <td style="color:red">36,362</td> <td style="color:red">-112,573</td> <td>610,714</td> <td>116,982</td> <td>179,168</td> </tr> 
+<tr> <td style="width: 165px; ">股息</td> <td>人民幣 0.1149</td> <td>人民幣 0.1203</td> <td>人民幣 0.1282</td> <td>人民幣 0.1499</td> <td style="color:blue">人民幣 0.1424</td> <td style="color:blue">人民幣 0.1371</td> <td>人民幣 0.1051</td> </tr> 
+</tbody></table>
+<br>
+<br>	
+<br>
+<table style="width: 50%; table-layout:fixed; font-size: 11px;">
+ 
+<tbody> 
+  <tr> <td style="width: 165px">截止日期</td> <td style="width: 87px">2013/06(Aug)</td> <td>2014/06</td> <td>2015/06</td> <td>2016/06</td> <td>2017/06</td> <td>2018/06</td> <td>2019/06</td>  
+
+  <tr> <td style="width: 165px; ">除稅及股息後盈利</td> <td style="color:red">-48,294</td> <td style="color:red">-69,013</td> <td>203,279</td> <td style="color:red">24,131</td> <td>610,184</td> <td>192,977</td> <td>306,309</td> </tr> 
+<tr> <td style="width: 165px; ">股息</td> <td>人民幣 0.1007</td> <td>人民幣 0.1157</td> <td>人民幣 0.1208</td> <td>人民幣 0.1346</td> <td style="color:blue">人民幣 0.1341</td> <td>人民幣 0.1394</td> <td>人民幣 0.1355</td> </tr> 
+  
+</tbody></table>	    
+	    
+<br />
+<img id="imgleg1" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1772&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="imgleg2" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=3147&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<br />	
+______<button>Click Mee</button>_____________________________________________<button>Click Mee</button>
+<br />
+	
+<br />
+<img id="imgbb1" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=823&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="imgbb2" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1686&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<br />
+<img id="img_hsic_l" src="http://asia.advfn.com/p.php?pid=staticchart&s=COM^SI\Z20&p=0&t=16"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_hsic" src="http://asia.advfn.com/p.php?pid=staticchart&s=COM^GC\Z20&p=0&t=16"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<br />	
+______<button>Click Mee</button>_____________________________________________<button>Click Mee</button>
+<br />
+
+<br />
+<img id="img_hsip_l" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=68000&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_hsip" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=68000&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+
+<br />
+<img id="img_shi_l" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=338&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_shi" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=338&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<br />	
+______<button>Click Mee</button>_____________________________________________<button>Click Mee</button>
+<br />
+
+	
+<br />
+<img id="img_wynn_l" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1128&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_wynn" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1128&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<br />
+<img id="img_snp_l" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=386&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_snp" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=386&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+
+	
+<br />
+<img id="img_gbp" src="http://asia.advfn.com/p.php?pid=staticchart&s=FX^gbphkd&p=0&t=16"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_btc" src="http://asia.advfn.com/p.php?pid=staticchart&s=COIN^BTCUSD&p=0&t=16"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<br />	
+______<button>Click Mee</button>_____________________________________________<button>Click Mee</button>
+<br />
+	
+<img id="img_krw" src="http://www.advfn.com/p.php?pid=staticchart&s=FX^usdkrw&p=2&t=16"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_cny" src="http://www.advfn.com/p.php?pid=staticchart&s=FX^cnhhkd&p=2&dm=2&t=16"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+	
+</div>
+
+	
+<script>
+$('#button_2328').on('click', function() { $('#text3').val("2328"); });
+$('#button_2318').on('click', function() { $('#text3').val("2318"); });
+$('#button_700').on('click', function() { $('#text3').val("700"); });
+$('#button_1299').on('click', function() { $('#text3').val("1299"); });
+$('#button_3046').on('click', function() { $('#text3').val("3046"); });
+
+$('#button_425').on('click', function() { $('#text3').val("425"); });
+$('#button_1999').on('click', function() { $('#text3').val("1999"); });
+$('#button_362').on('click', function() { $('#text3').val("362"); });
+$('#button_338').on('click', function() { $('#text3').val("2099"); });
+$('#button_1099').on('click', function() { $('#text3').val("1099"); });
+$('#button_133').on('click', function() { $('#text3').val("133"); });
+
+$('#button_175').on('click', function() { $('#text3').val("175"); });
+$('#button_397').on('click', function() { $('#text3').val("397"); });
+$('#button_1818').on('click', function() { $('#text3').val("1818"); });
+$('#button_927').on('click', function() { $('#text3').val("927"); });
+$('#button_1083').on('click', function() { $('#text3').val("1083"); });
+$('#button_2314').on('click', function() { $('#text3').val("2314"); });
+
+
+$('#button_bitc').on('click', function() { $('#text3').val("3066"); $('#text3a').val("3068");shineall();});
+$('#button_ipo').on('click', function() { $('#text3').val("2593"); $('#text3a').val("2633");shineall();});
+$('#button_2024econ').on('click', function() { $('#text3').val("2400"); $('#text3a').val("1318");shineall();});
+$('#button_1980').on('click', function() { $('#text3').val("1980"); });
+$('#button_3709').on('click', function() { $('#text3').val("3709"); });
+$('#button_607').on('click', function() { $('#text3').val("607"); });
+$('#button_8207').on('click', function() { $('#text3').val("8207"); });
+
+$('#button_285').on('click', function() { $('#text3').val("285");shineall(); });
+$('#button_611').on('click', function() { $('#text3').val("611");shineall(); });
+$('#button_419').on('click', function() { $('#text3').val("419");shineall(); });
+
+$('#button_1833').on('click', function() { $('#text3').val("1833");shineall(); });
+$('#button_3147').on('click', function() { $('#text3').val("3147");shineall(); });
+$('#button_3165').on('click', function() { $('#text3').val("3165");shineall(); });
+
+$('#button_call11').on('click', function() { $('#text3').val("59789");shineall(); });
+$('#button_call12').on('click', function() { $('#text3').val("68309");shineall(); });
+$('#button_put11').on('click', function() { $('#text3').val("62836");shineall(); });
+$('#button_put12').on('click', function() { $('#text3').val("64059");shineall(); });
+	
+$('#button_vhsi').on('click', function() { $('#text3').val("VHSI");shineall(); });
+$('#button_call').on('click', function() { $('#text3').val("175"); $('#text3a').val("2018");shineall();});
+$('#button_put').on('click', function() { $('#text3').val("9988"); $('#text3a').val("3690");shineall(); });
+$('#button_call1').on('click', function() { $('#text3').val("7200"); $('#text3a').val("1299");shineall(); });
+$('#button_put1').on('click', function() { $('#text3').val("3165"); $('#text3a').val("3147");shineall();});
+$('#button_call2').on('click', function() { $('#text3').val("6806"); $('#text3a').val("819");shineall(); });
+$('#button_put2').on('click', function() { $('#text3').val("3759"); $('#text3a').val("1801");shineall();});
+	
+/////////////////codepen.io/dmondma/pen/OJPpWwY/////////////////////////////////////
+function validate(form) {
+	
+	$('#output').removeClass('invisible').text((form.price.value/form.price1.value).toFixed(3));
+	
+	return false;
+}
+	
+	
+/////////////////////////////////////////////////////
+$("#sector_watch").on("click", "input", function () {
+  var res = $(this).val().split(/\.\.\./g);
+  $("#text3").val(res[0]);
+  $("#text3a").val(res[1]);
+  shineall();
+});
+
+/////////////////////////////////////////////////////
+$("#pairsfromcloud").click(function () {
+  // console.log("myvalue=",$(this).val());
+  // jsonblob.com/api/jsonBlob/c64ff3aa-f2cc-11ea-8070-6b11b868133b
+  // https://api.jsonstorage.net/v1/json/00000000-0000-0000-0000-000000000000/010833c9-ba3e-4e09-a9ad-0a4a4a808e8f	
+  $.getJSON("https://api.jsonstorage.net/v1/json/e4902282-fc69-4719-8ba4-b5d8349931d7/5db0627e-f1f4-465c-9a72-a2b3c95da7e3?apiKey=16410691-1717-428e-b081-d4ab59a744de",
+    function (posts) {
+      for (var i = 2; i < posts.queue.length; i++) {
+        $('input[cat="pk"]').each(function () {
+          var id = $(this).attr("id");
+          if (id == posts.queue[i].key) {
+            var value = posts.queue[i].name;
+            $(this).val(value);
+          }
+        });
+      }
+    }
+  );
+});
+/////////////////////////////////////////////////////
+$("#scpairsfromcloud").click(function () {
+  // console.log("myvalue=",$(this).val());
+  $.getJSON(
+    "https://api.jsonstorage.net/v1/json/e4902282-fc69-4719-8ba4-b5d8349931d7/5db0627e-f1f4-465c-9a72-a2b3c95da7e3?apiKey=16410691-1717-428e-b081-d4ab59a744de",
+    function (posts) {
+      for (var i = 2; i < posts.queue.length; i++) {
+        $('input[cat="pksc"]').each(function () {
+          var id = $(this).attr("id");
+          if (id == posts.queue[i].key) {
+            var value = posts.queue[i].name;
+            $(this).val(value);
+          }
+        });
+      }
+    }
+  );
+});
+
+/////////////////////////////////////////////////////
+$("#sector_sc_watch").on("click", "input", function () {
+  var res = $(this).val().split(/\.\.\./g);
+  $("#text1").val(res[0] + ":$one:" + res[1]);
+  $("#button_vb").click();
+});
+
+/////////////////////////////////////////////////////
+$("#scjpairsfromcloud").click(function () {
+  //   console.log("myvalue=",$(this).val());
+  $.getJSON(
+    "https://api.jsonstorage.net/v1/json/e4902282-fc69-4719-8ba4-b5d8349931d7/573eec50-837c-4640-8eec-e3aee36109fa?apiKey=16410691-1717-428e-b081-d4ab59a744de",
+    function (posts) {
+      for (var i = 2; i < posts.queue.length; i++) {
+        $('input[cat="pkjsc"]').each(function () {
+          var id = $(this).attr("id");
+          if (id == posts.queue[i].key) {
+            var value = posts.queue[i].name;
+            $(this).val(value);
+          }
+        });
+      }
+    }
+  );
+});
+
+/////////////////////////////////////////////////////
+$("#sector_jsc_watch").on("click", "input", function () {
+  var res = $(this)
+    .val()
+    .split(/\.\.\./g);
+  $("#text1").val(res[0]);
+  $("#text4").val(res[1]);
+  $("#text4a").val(res[2]);
+  $("#text4b").val(res[3]);
+  $("#button_xy").click();
+});
+
+/////////////////////////////////////////////////////
+$("#button_xy_1").on("click", function() { $("#button_xy").click(); });
+	
+</script>
+
+<br>
+<a name="XX" style="font-weight:normal; font-size:33px; background-color:#0FF00F; color:white">
+____________________600 - 500__________________________ <=> !!!!!
+</a>
+</br>
+
+<br>
+<canvas id="c_yao" width="750" height="420" style="border:1px solid #ccc"></canvas>
+
+<script>
+      (function() {
+
+        var canvas_yao = new fabric.Canvas('c_yao', {
+        selection : false,
+        controlsAboveOverlay:true,
+        centeredScaling:true,
+        allowTouchScrolling: true
+    });
+
+
+
+var line = new fabric.Line([7, 130, 630, 7], {
+    selectable:false,
+  left: 30,
+  top: 355,
+  stroke: 'rgba(0,0,255,0.3)',
+  strokeWidth: 2,
+  angle: -3,
+  originX: 'left',
+  originY: 'bottom'
+});
+canvas_yao.add(line);
+
+var line = new fabric.Line([7, 130, 630, 7], {
+    selectable:false,
+  left: 30,
+  top: 290,
+  stroke: 'rgba(0,255,0,0.8)',
+  strokeWidth: 2,
+  angle: -3,
+  originX: 'left',
+  originY: 'bottom'
+});
+canvas_yao.add(line);
+
+// canvas_yao.setBackgroundImage('http://stockcharts.com/c-sc/sc?s=aagiy:$one:pngay&p=D&&yr=9&i=0&a=168&r=0999', canvas_yao.renderAll.bind(canvas_yao), {
+canvas_yao.setBackgroundImage('http://stockcharts.com/c-sc/sc?s=aagiy:$one:ppccy&p=D&&yr=9&i=0&a=168&r=0999', canvas_yao.renderAll.bind(canvas_yao), {
+    backgroundImageOpacity: 0.5,
+    backgroundImageStretch: false
+});
+
+/////////////
+      })();
+</script>
+<!////////////////////////////>
+
+</br>
+<img src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1299&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+<img src="http://charts.megahubhk.com/servlets/MHImageChart?sid=2328&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+</br>
+<img src="http://stockcharts.com/c-sc/sc?s=aagiy:ppccy&p=D&&yr=10&i=p40545395733&a=168&r=0999"  alt="Kenny g Breathless" width="480" height="500" border="0">
+
+<script>
+var url2 = "https://spreadsheets.google.com/feeds/list/1bn8v2viL4MM7uQpS0iKquWvtH6qt1QMaSRK2WpvbON4/oz0xn5d/public/values?alt=json"; 
+	//var foo = $("#text2").val();
+	//dc=document.getElementById("dropdown_change")
+	
+	Plotly.d3.json(url2, function (error, result) { 
+
+		var pu1 = [], pu2 = [];
+		for (i = 0; i < result.feed.entry.length; i += 1) { 
+			pu1.push(result.feed.entry[i].gsx$pullupname.$t); 
+			pu2.push(result.feed.entry[i].gsx$pullupcode.$t); 
+		};
+		dc=document.getElementById("dropdown")
+
+// Loop through the array
+for (var i = 0; i < pu1.length; ++i) {
+    // Append the element to the end of Array list
+    dc[dc.length] = new Option(pu1[i] + "--" +pu2[i], pu2[i]);
+}
+	}) 
+
+$("#dropdown").change(function(){
+      dc=document.getElementById("dropdown")
+		$("#text3").val(dc.value);
+});
+
+  
+  
+  
+</script>  
+
+
+<br>
+<a name="XX" style="font-weight:normal; font-size:33px; background-color:#0FF00F; color:white">
+____________________DAX <=> DJSZ 32L 13.99H______________________ !!!!!
+</a>
+</br>
+
+<br>
+<canvas id="c_dsx" width="750" height="420" style="border:1px solid #ccc"></canvas>
+
+<script>
+      (function() {
+
+        var canvas_dsx = new fabric.Canvas('c_dsx', {
+        selection : false,
+        controlsAboveOverlay:true,
+        centeredScaling:true,
+        allowTouchScrolling: true
+    });
+
+
+
+var line = new fabric.Line([7, 130, 500, 7], {
+    selectable:false,
+  left: 10,
+  top: 110,
+  stroke: 'rgba(0,0,255,0.3)',
+  strokeWidth: 2,
+  angle: 14,
+  originX: 'left',
+  originY: 'bottom'
+});
+canvas_dsx.add(line);
+
+var line = new fabric.Line([7, 130, 500, 7], {
+    selectable:false,
+  left: 10,
+  top: 340,
+  stroke: 'rgba(0,255,0,0.8)',
+  strokeWidth: 2,
+  angle: 14,
+  originX: 'left',
+  originY: 'bottom'
+});
+canvas_dsx.add(line);
+
+canvas_dsx.setBackgroundImage('http://stockcharts.com/c-sc/sc?s=$dax:$one:$djsz&p=W&&yr=6&i=0&a=168&r=0999', canvas_dsx.renderAll.bind(canvas_dsx), {
+    backgroundImageOpacity: 0.5,
+    backgroundImageStretch: false
+});
+
+/////////////
+      })();
+</script>
+<!////////////////////////////>
+
+</br>
+<img src="http://charts.megahubhk.com/servlets/MHImageChart?sid=3147&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+<img src="http://charts.megahubhk.com/servlets/MHImageChart?sid=3165&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+</br>
+<img src="http://stockcharts.com/c-sc/sc?s=$dax:$djsz&p=W&&yr=6&i=0&a=168&r=0999"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+
+</br>
+<img src="http://stockcharts.com/c-sc/sc?s=vwesx:$HSI&p=D&&yr=10&i=0&a=168&r=0999"  alt="Kenny g Breathless" width="440" height="400" border="0">
+<img src="http://stockcharts.com/c-sc/sc?s=$tsx:$HSI&p=D&&yr=10&i=0&a=168&r=0999"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+</br>
+<img src="http://stockcharts.com/c-sc/sc?s=vwesx:$HSCEI&p=D&&yr=10&i=0&a=168&r=0999"  alt="Kenny g Breathless" width="440" height="400" border="0">
+<img src="http://stockcharts.com/c-sc/sc?s=$tsx:$hscei&p=W&&yr=11&i=p40545395733&a=168&r=0999"  alt="Kenny g Breathless" width="550" height="500" border="0">
+
+<br>
+<a name="XX" style="font-weight:normal; font-size:33px; background-color:#0FF00F; color:white">
+____________________CE PUT <=> 100MA__________________________ <=> !!!!!
+</a>
+</br>
+
+<br>
+<canvas id="c_fxp" width="750" height="420" style="border:1px solid #ccc"></canvas>
+
+<script>
+      (function() {
+
+        var canvas_fxp = new fabric.Canvas('c_fxp', {
+        selection : false,
+        controlsAboveOverlay:true,
+        centeredScaling:true,
+        allowTouchScrolling: true
+    });
+
+
+
+var line = new fabric.Line([7, 130, 600, 7], {
+    selectable:false,
+  left: 110,
+  top: 130,
+  stroke: 'rgba(0,0,255,0.3)',
+  strokeWidth: 2,
+  angle: 28,
+  originX: 'left',
+  originY: 'bottom'
+});
+canvas_fxp.add(line);
+
+var line = new fabric.Line([7, 130, 600, 7], {
+    selectable:false,
+  left: 110,
+  top: 260,
+  stroke: 'rgba(0,255,0,0.8)',
+  strokeWidth: 2,
+  angle: 28,
+  originX: 'left',
+  originY: 'bottom'
+});
+canvas_fxp.add(line);
+
+canvas_fxp.setBackgroundImage('http://stockcharts.com/c-sc/sc?s=fxp&p=D&&yr=3&i=0&a=168&r=0999', canvas_fxp.renderAll.bind(canvas_fxp), {
+    backgroundImageOpacity: 0.5,
+    backgroundImageStretch: false
+});
+
+/////////////
+      })();
+</script>
+
+<img id="img_fxp" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=2828&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+
+<br>
+<a name="XX" style="font-weight:normal; font-size:33px; background-color:#0FF00F; color:white">
+____________________2000 - 1000__________________________ <=> !!!!!
+</a>
+</br>
+
+<br>
+<canvas id="c_pn" width="750" height="420" style="border:1px solid #ccc"></canvas>
+
+<script>
+      (function() {
+
+        var canvas_pn = new fabric.Canvas('c_pn', {
+        selection : false,
+        controlsAboveOverlay:true,
+        centeredScaling:true,
+        allowTouchScrolling: true
+    });
+
+
+
+var line = new fabric.Line([7, 130, 500, 7], {
+    selectable:false,
+  left: 10,
+  top: 140,
+  stroke: 'rgba(0,0,255,0.3)',
+  strokeWidth: 2,
+  angle: 14,
+  originX: 'left',
+  originY: 'bottom'
+});
+canvas_pn.add(line);
+
+var line = new fabric.Line([7, 130, 500, 7], {
+    selectable:false,
+  left: 10,
+  top: 340,
+  stroke: 'rgba(0,255,0,0.8)',
+  strokeWidth: 2,
+  angle: 14,
+  originX: 'left',
+  originY: 'bottom'
+});
+canvas_pn.add(line);
+
+canvas_pn.setBackgroundImage('http://stockcharts.com/c-sc/sc?s=$tsx:$one:pngay&p=D&&yr=1&i=0&a=168&r=0999', canvas_pn.renderAll.bind(canvas_pn), {
+    backgroundImageOpacity: 0.5,
+    backgroundImageStretch: false
+});
+
+/////////////
+      })();
+</script>
+
+</br>
+<img src="http://stockcharts.com/c-sc/sc?s=$tsx:pngay&p=D&&yr=10&i=0&a=168&r=0999"  alt="Kenny g Breathless" width="440" height="400" border="0">
+<img src="http://charts.megahubhk.com/servlets/MHImageChart?sid=2318&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1011000&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+</br>
+<img id="img_pngay" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=2318&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+
+
+<br>
+<a name="XX" style="font-weight:normal; font-size:33px; background-color:#0FF00F; color:white">
+________________mon_fd:8008:1686__bdx:2018________________________ <=> !!!!!
+</a>
+</br>
+<br />
+
+<div id="sector_fd">	
+	<button>Click Mee</button>
+
+<br />
+
+    <br>
+<img id="img_fdxxxk" src="http://www.advfn.com/p.php?pid=staticchart&s=FX^usdkrw&p=0&t=16&k=66&dm=2&m=85"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+    <br>
+<img id="img_fdxxx" src="http://stockcharts.com/c-sc/sc?chart=udn:qqq,uu[660,500]daclyyay[dc][pb50!b200!f]&a=168&r=13"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_fdmon1" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=7261&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+<img id="img_fdmon1-1" src="https://charts.megahubhk.com/servlets/MHImageChart?sid=7261&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&"  alt="Kenny g Breathless" width="275" height="215" border="0">
+
+    <br>
+<img id="img_fdxxx" src="http://stockcharts.com/c-sc/sc?chart=udn:kweb,uu[660,500]daclyyay[dc][pb50!b200!f]&a=168&r=13"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_fdmon2" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=2812&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+<img id="img_fdmon2-1" src="https://charts.megahubhk.com/servlets/MHImageChart?sid=2812&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&"  alt="Kenny g Breathless" width="275" height="215" border="0">
+
+
+    <br>
+<img id="img_fdxxx" src="http://stockcharts.com/c-sc/sc?chart=udn:Aacay,uu[660,500]daclyyay[dc][pb50!b200!f]&a=168&r=13"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_fdmon3" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=6160&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+<img id="img_fdmon3-1" src="https://charts.megahubhk.com/servlets/MHImageChart?sid=6160&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&"  alt="Kenny g Breathless" width="275" height="215" border="0">
+
+<br />	
+	<button>Click Me</button>
+<br />
+
+    <br>
+<img id="img_fdxxx" src="http://stockcharts.com/c-sc/sc?chart=udn:lly,uu[660,500]daclyyay[dc][pb50!b200!f]&a=168&r=13"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_fdmon4" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1801&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+<img id="img_fdmon4-1" src="https://charts.megahubhk.com/servlets/MHImageChart?sid=1801&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&"  alt="Kenny g Breathless" width="275" height="215" border="0">
+
+
+    <br>
+<img id="img_fdxxx" src="http://stockcharts.com/c-sc/sc?chart=udn:aagiy,uu[660,500]daclyyay[dc][pb50!b200!f]&a=168&r=13"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_fdmon5" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1299&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+<img id="img_fdmon5-1" src="https://charts.megahubhk.com/servlets/MHImageChart?sid=1299&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&"  alt="Kenny g Breathless" width="275" height="215" border="0">
+
+<br />	
+	<button>Click Me</button>
+<br />
+
+    <br>
+<div class="xbox">
+    <img id="img_fdxxx" src="http://stockcharts.com/c-sc/sc?chart=udn:ipos:$one:sftby,uu[660,500]daclyyay[dc][pb50!b200!f]&a=168&r=13"  alt="Kenny g Breathless" width="440" height="400" border="0">
+    <p>---1.354 ^^ 0.88</p>
+</div>
+<img id="img_fdmon13" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=2269&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+<img id="img_fdmon13-1" src="https://charts.megahubhk.com/servlets/MHImageChart?sid=3690&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&"  alt="Kenny g Breathless" width="275" height="215" border="0">
+
+
+	
+<br />	
+	<button>Click Me</button>
+<br />
+
+    <br>
+<img id="img_fdxxx" src="http://stockcharts.com/c-sc/sc?chart=udn:kure,uu[660,500]daclyyay[dc][pb50!b200!f]&a=168&r=13"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_fdmon6" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1093&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+<img id="img_fdmon6-1" src="https://charts.megahubhk.com/servlets/MHImageChart?sid=1093&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&"  alt="Kenny g Breathless" width="275" height="215" border="0">
+
+
+<br />	
+	<button>Click Me</button>
+<br />
+
+    <br>
+<div class="xbox">
+    <img id="img_fdxxx" src="http://stockcharts.com/c-sc/sc?chart=udn:onc,uu[660,500]daclyyay[dc][pb50!b200!f]&a=168&r=13"  alt="Kenny g Breathless" width="440" height="400" border="0">
+    <p>---2.1 ^^ 1.1 ^^ 0.98</p>
+</div>
+<img id="img_fdmon14" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=6160&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+<img id="img_fdmon14-1" src="https://charts.megahubhk.com/servlets/MHImageChart?sid=6160&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&"  alt="Kenny g Breathless" width="275" height="215" border="0">
+
+<br />	
+	<button>Click Me</button>
+<br />
+
+    <br>
+<div class="xbox">
+    <img id="img_fdxxx" src="http://stockcharts.com/c-sc/sc?chart=udn:fca,uu[660,500]daclyyay[dc][pb50!b200!f]&a=168&r=13"  alt="Kenny g Breathless" width="440" height="400" border="0">
+    <p>---2.1 ^^ 1.1 ^^ 0.98</p>
+</div>
+<img id="img_fdmon15" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1177&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+<img id="img_fdmon15-1" src="https://charts.megahubhk.com/servlets/MHImageChart?sid=1177&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&"  alt="Kenny g Breathless" width="275" height="215" border="0">
+
+    <br>
+<img id="img_fdxxx" src="http://stockcharts.com/c-sc/sc?chart=udn:gelyf,uu[660,500]daclyyay[dc][pb50!b200!f]&a=168&r=13"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_fdmon7" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=0175&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+<img id="img_fdmon7-1" src="https://charts.megahubhk.com/servlets/MHImageChart?sid=0175&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&"  alt="Kenny g Breathless" width="275" height="215" border="0">
+	
+    <br>
+<img id="img_fdxxx" src="http://stockcharts.com/c-sc/sc?chart=udn:tcehy,uu[660,500]daclyyay[dc][pb50!b200!f]&a=168&r=13"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_fdmon8" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=0700&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+<img id="img_fdmon8-1" src="https://charts.megahubhk.com/servlets/MHImageChart?sid=0700&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&"  alt="Kenny g Breathless" width="275" height="215" border="0">
+
+
+<br />	
+	<button>Click Me</button>
+<br />
+	
+    <br>
+<img id="img_fdxxx" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=354&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010006&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+<div class="xbox">
+    <img id="img_fdmon16" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=354&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+    <p>--- PE20@6 ~30 ^^^</p>
+</div>
+<img id="img_fdmon16-1" src="https://charts.megahubhk.com/servlets/MHImageChart?sid=354&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&"  alt="Kenny g Breathless" width="275" height="215" border="0">
+
+<br />	
+	<button>Click Me</button>
+<br />
+	
+    <br>
+<img id="img_fdxxx" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=268&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010006&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_fdmon10" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=268&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+<img id="img_fdmon10-1" src="https://charts.megahubhk.com/servlets/MHImageChart?sid=268&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&"  alt="Kenny g Breathless" width="275" height="215" border="0">
+	
+    <br>
+<img id="img_fdxxx" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=3888&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010006&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_fdmon11" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=3888&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+<img id="img_fdmon11-1" src="https://charts.megahubhk.com/servlets/MHImageChart?sid=3888&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&"  alt="Kenny g Breathless" width="275" height="215" border="0">
+
+    <br>
+<img id="img_fdxxx" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=696&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010006&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_fdmon12" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=696&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+<img id="img_fdmon12-1" src="https://charts.megahubhk.com/servlets/MHImageChart?sid=696&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&"  alt="Kenny g Breathless" width="275" height="215" border="0">
+	
+
+<br />	
+	<button>Click Mee</button>
+<br />
+	
+</div>
+	
+<br>
+<a name="XX" style="font-weight:normal; font-size:33px; background-color:#0FF00F; color:white">
+________________mon_bdx:8008:1686__bdx:2018________________________ <=> !!!!!
+</a>
+</br>
+<br />
+
+<div id="sector_mon">	
+	<button>Click Me</button>
+
+<br />
+
+	
+<img id="img_xxxk" src="http://www.advfn.com/p.php?pid=staticchart&s=FX^usdkrw&p=0&t=16&k=66&dm=2&m=85"  alt="Kenny g Breathless" width="440" height="400" border="0">
+	
+    <br>
+<img id="img_xxx" src="http://stockcharts.com/c-sc/sc?s=$tsx:$ndx&p=D&&yr=21&i=p40545395733&a=168&r=0999"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_mon1" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=7261&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+
+
+    <br>
+<img id="img_xxx" src="http://stockcharts.com/c-sc/sc?s=$tsx:ewh&p=D&&yr=21&i=p40545395733&a=168&r=0999"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_mon2" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1299&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+
+    <br>
+<img id="img_xxx" src="http://stockcharts.com/c-sc/sc?s=$tsx:$one:fxi&p=D&&yr=21&i=p40545395733&a=168&r=0999"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_mon3" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=3968&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+<br />	
+	<button>Click Me</button>
+<br />
+
+    <br>
+<img id="img_xxx" src="http://stockcharts.com/c-sc/sc?s=bdx:$one:baba&p=D&&yr=11&i=p40545395733&a=168&r=0999"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_mon4_1" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=9988&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+	
+<br />	
+	<button>Click Me</button>
+<br />
+
+    <br>
+<img id="img_xxx" src="http://stockcharts.com/c-sc/sc?s=bdx:$one:tcehy&p=D&&yr=11&i=p40545395733&a=168&r=0999"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_mon4" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=0700&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+    <br>
+<img id="img_xxx" src="http://stockcharts.com/c-sc/sc?s=bdx:$one:aagiy&p=D&&yr=11&i=t9086061739c&a=168&r=0999"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_mon5" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1299&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+    <br>
+<img id="img_xxx" src="http://stockcharts.com/c-sc/sc?s=$tsx:$one:ezj&p=D&&yr=11&i=p40545395733&a=168&r=0999"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_mon6" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=7262&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+<br />	
+	<button>Click Me</button>
+<br />
+
+    <br>
+<img id="img_xxx" src="http://stockcharts.com/c-sc/sc?s=bdx:$one:asmiy&yr=16&p=w&i=0&a=168&r=pang"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_mon7" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=0522&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+    <br>
+<img id="img_xxx" src="http://stockcharts.com/c-sc/sc?s=tcehy:$one:gelyf&yr=16&p=w&i=0&a=168&r=pang"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_mon8" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=0175&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+    <br>
+<img id="img_xxx" src="http://stockcharts.com/c-sc/sc?s=tcehy:gelyf&yr=16&p=w&i=0&a=168&r=pang"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_xxx" src="http://stockcharts.com/c-sc/sc?s=gelyf&yr=6&p=w&i=0&a=168&r=pang"  alt="Kenny g Breathless" width="440" height="400" border="0">
+    <br>
+<img id="img_mon8a" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=0700&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+<br />	
+	<button>Click Me</button>
+<br />
+
+    <br>
+<img id="img_xxx" src="http://stockcharts.com/c-sc/sc?s=$dax:$one:ashs&p=D&&yr=11&i=p40545395733&a=168&r=0999"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_mon10" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=3188&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+		
+	
+    <br>
+<img id="img_xxx" src="http://stockcharts.com/c-sc/sc?s=aagiy:pngay&p=D&&yr=10&i=p40545395733&a=168&r=0999"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_mon9" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=2318&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+
+
+    <br>
+<img id="img_xxx" src="http://stockcharts.com/c-sc/sc?s=aagiy:$one:pngay&p=D&&yr=10&i=p40545395733&a=168&r=0999"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_xxx" src="http://stockcharts.com/c-sc/sc?s=aagiy&p=D&&yr=10&i=p40545395733&a=168&r=0999"  alt="Kenny g Breathless" width="440" height="400" border="0">
+	
+	
+
+<br />	
+	<button>Click Me</button>
+<br />
+</div>
+	
+<br>
+<a name="XX" style="font-weight:normal; font-size:33px; background-color:#0FF00F; color:white">
+________________mon1___________________________ <=> !!!!!
+</a>
+</br>
+
+    <br>
+<img src="http://stockcharts.com/c-sc/sc?s=vbk:$one:wynn&p=D&&yr=14&i=p40545395733&a=168&r=0999"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+<img id="img_lvs" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1128&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="440" height="400" border="0">
+
+    <br>
+<img src="http://stockcharts.com/c-sc/sc?s=vbk:ashs&p=D&&yr=14&i=p40545395733&a=168&r=0999"  alt="Kenny g Breathless" width="340" height="300" border="0">
+<img src="http://stockcharts.com/c-sc/sc?s=vbk:$one:ashs&p=D&&yr=14&i=p40545395733&a=168&r=0999"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+<img id="img_xxx" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=3188&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+    <br>
+<img src="http://stockcharts.com/c-sc/sc?s=uup:ewp&p=D&&yr=14&i=p40545395733&a=168&r=0999"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+<img id="img_xxx" src="http://stockcharts.com/c-sc/sc?s=uup:ewp&p=D&&yr=8&i=0&a=168&r=0999"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+<img id="img_xxx" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=3165&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+<br>
+<a name="XX" style="font-weight:normal; font-size:33px; background-color:#0FF00F; color:white">
+
+____________v-pngay_1.255 0.611__________________________ <=> !!!!!
+</a>
+</br>  
+    <br>
+<img src="http://stockcharts.com/c-sc/sc?s=$NIFTYPR2XLEV:$one:$spx&p=D&&yr=6&i=p40545395733&a=168&r=0999"  alt="Kenny g Breathless" width="340" height="300" border="0">
+<img src="http://stockcharts.com/c-sc/sc?s=$NIFTYPR2XLEV:$spx&p=D&&yr=6&i=p40545395733&a=168&r=0999"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+<img id="img_xxx" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=7261&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+
+<img id="img_xxx" src="http://charts.megahubhk.com/servlets/MHImageChart?sid=2836&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&"  alt="Kenny g Breathless" width="340" height="300" border="0">
+</br> 
+<iframe width="900" height="500" frameborder="0" scrolling="no" src="//plot.ly/~uu/14.embed"></iframe>
+</br> 
+</br> 	
+<iframe width="900" height="500" frameborder="0" scrolling="no" src="//plot.ly/~uu/12.embed"></iframe>	
+</br> 
+</br> 
+<iframe width="900" height="500" frameborder="0" scrolling="no" src="//plot.ly/~uu/18.embed"></iframe>
+</br> 
+<script>
+$('#button_tw').on('click', function () {
+        var textbb = "bang";
+        var text1 = $('#text1');
+        var text4 = $('#text4');
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=tcehy:bang&p=w&yr=20&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2.replaceAll("bang", text1.val(), true));
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual').src=text4.val();
+
+        //var staticstring2 = "http://stockcharts.com/c-sc/sc?chart=ryccx:bang,uu[460,a]waclyyay[d20010101][pb50!b200!f]&a=168&r=pang";
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=ryccx:bang&p=w&yr=20&i=0&a=168&r=pang";
+        
+        text4.val(staticstring2.replaceAll("bang", text1.val(), true));
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dualplus').src=text4.val();
+        
+        //var staticstring2 = "http://stockcharts.com/c-sc/sc?chart=bang,uu[460,a]daclyyay[dc][pb50!b200!f]&a=168&r=pang";
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=bang&p=d&i=0&a=168&r=pang";
+        
+        text4.val(staticstring2.replaceAll("bang", text1.val(), true));
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual_raw').src=text4.val();
+        
+        //var staticstring2 = "http://stockcharts.com/c-sc/sc?chart=tcehy:bang,uu[460,a]daclyyay[dc][pb50!b200!f]&a=168&r=pang";
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=tcehy:bang&p=d&i=0&a=168&r=pang";
+        
+        text4.val(staticstring2.replaceAll("bang", text1.val(), true));
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual++').src=text4.val();
+  
+        //var staticstring2 = "http://stockcharts.com/c-sc/sc?chart=ryccx:bang,uu[460,a]daclyyay[dc][pb50!b200!f]&a=168&r=pang";
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=ryccx:bang&p=d&i=0&a=168&r=pang";
+        
+        text4.val(staticstring2.replaceAll("bang", text1.val(), true));
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual+++').src=text4.val();
+        
+});	
+	
+$('#button_rf').on('click', function () {
+        var textbb = "bang";
+        var text1 = $('#text1');
+        var text4 = $('#text4');
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=fdpix:bang&p=w&yr=20&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2.replaceAll("bang", text1.val(), true));
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual').src=text4.val();
+
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=rdpix:bang&p=w&yr=20&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2.replaceAll("bang", text1.val(), true));
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dualplus').src=text4.val();
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=bang&p=d&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2.replaceAll("bang", text1.val(), true));
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual_raw').src=text4.val();
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=rdpix:bang&p=d&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2.replaceAll("bang", text1.val(), true));
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual++').src=text4.val();
+  
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=fdpix:bang&p=d&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2.replaceAll("bang", text1.val(), true));
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual+++').src=text4.val();
+        
+});
+  
+$('#button_vut').on('click', function () {
+        var textbb = "bang";
+        var text1 = $('#text1');
+        var text4 = $('#text4');
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=vwesx:bang&p=w&yr=20&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2.replaceAll("bang", text1.val(), true));
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual').src=text4.val();
+
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=$tsx:bang&p=w&yr=20&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2.replaceAll("bang", text1.val(), true));
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dualplus').src=text4.val();
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=bang&p=d&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2.replaceAll("bang", text1.val(), true));
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual_raw').src=text4.val();
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=$tsx:bang&p=d&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2.replaceAll("bang", text1.val(), true));
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual++').src=text4.val();
+  
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=vwesx:bang&p=d&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2.replaceAll("bang", text1.val(), true));
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual+++').src=text4.val();
+        
+});
+
+$('#button_Gee_Bgne').on('click', function () {
+//        var textbb = "bang";
+//        var text1 = $('#text1');
+        var text4 = $('#text4');
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=gelyf:onc&p=d&yr=8&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual').src=text4.val();
+
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=gelyf:$one:onc:$one:bdx:$one:bdx&p=d&yr=8&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dualplus').src=text4.val();
+        
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=gelyf:onc&p=d&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual_raw').src=text4.val();
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=gelyf:$one:onc:$one:bdx:$one:bdx&p=d&i=0&a=168&r=pang";
+  
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual++').src=text4.val();
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=gelyf&p=d&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual+++').src=text4.val();
+	
+        text4.val("http://stockcharts.com/c-sc/sc?s=onc&p=d&i=0&a=168&r=pang");
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual--').src=text4.val();	
+	
+        
+});
+	
+$('#button_Bab_Mei').on('click', function () {
+//        var textbb = "bang";
+//        var text1 = $('#text1');
+        var text4 = $('#text4');
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=baba:mpngf&p=d&yr=4&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual').src=text4.val();
+
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=baba:$one:mpngf:$one:bdx:$one:bdx&p=d&yr=4&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dualplus').src=text4.val();
+        
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=baba:mpngf&p=d&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual_raw').src=text4.val();
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=baba:$one:mpngf:$one:bdx:$one:bdx&p=d&i=0&a=168&r=pang";
+        
+  
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual++').src=text4.val();
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=baba&p=d&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual+++').src=text4.val();
+	
+        text4.val("http://stockcharts.com/c-sc/sc?s=mpngf&p=d&i=0&a=168&r=pang");
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual--').src=text4.val();	
+	
+        
+});
+	
+$('#button_Cei_Aig').on('click', function () {
+        var text4 = $('#text4');
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=$hscei:$one:$hscei:aagiy&p=w&yr=8&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual').src=text4.val();
+
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=$hscei:$one:$hscei:$one:aagiy&p=w&yr=8&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dualplus').src=text4.val();
+        
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=$hscei:$one:$hscei:aagiy&p=d&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual_raw').src=text4.val();
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=$hscei:$one:$hscei:$one:aagiy&p=d&i=0&a=168&r=pang";
+  
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual++').src=text4.val();
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=$hscei:$one:$hscei&p=d&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual+++').src=text4.val();
+	
+        text4.val("http://stockcharts.com/c-sc/sc?s=aagiy&p=d&i=0&a=168&r=pang");	
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual--').src=text4.val();	
+
+});
+
+$('#button_Kur_Bdx').on('click', function () {
+        var text4 = $('#text4');
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=kure:$one:kure:bdx&p=d&yr=4&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual').src=text4.val();
+
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=kure:$one:kure:$one:bdx&p=d&yr=4&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dualplus').src=text4.val();
+        
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=kure:$one:kure:bdx&p=d&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual_raw').src=text4.val();
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=kure:$one:kure:$one:bdx&p=d&i=0&a=168&r=pang";      
+  
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual++').src=text4.val();
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=kure&p=d&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual+++').src=text4.val();
+	
+        text4.val("http://charts.megahubhk.com/servlets/MHImageChart?sid=7261&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010006&ctype=1&wm=13&p=69");
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual--').src=text4.val();	
+
+});
+	
+$('#button_Atm_Bdx').on('click', function () {
+        var text4 = $('#text4');
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=baba:tcehy&p=d&yr=6&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual').src=text4.val();
+
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=baba:$one:tcehy:$one:bdx:$one:bdx&p=w&yr=6&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dualplus').src=text4.val();
+        
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=baba:tcehy&p=d&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual_raw').src=text4.val();
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=baba:$one:tcehy:$one:bdx:$one:bdx&p=d&i=0&a=168&r=pang";     
+  
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual++').src=text4.val();
+        
+        var staticstring2 = "http://charts.megahubhk.com/servlets/MHImageChart?sid=700&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010006&ctype=1&wm=13&p=69";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual+++').src=text4.val();
+	
+        text4.val("http://stockcharts.com/c-sc/sc?s=baba&p=d&i=0&a=168&r=pang");
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual--').src=text4.val();	
+
+});
+	
+$('#button_Dax_Sz').on('click', function () {
+        var text4 = $('#text4');
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=$dax:$djsz&p=w&yr=8&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual').src=text4.val();
+
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=$dax:$one:$djsz&p=w&yr=8&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dualplus').src=text4.val();
+        
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=$dax:$djsz&p=d&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual_raw').src=text4.val();
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=$dax:$one:$djsz&p=d&i=0&a=168&r=pang";
+        
+  
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual++').src=text4.val();
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=$dax&p=d&i=0&a=168&r=pang";     
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual+++').src=text4.val();
+	
+        text4.val("http://stockcharts.com/c-sc/sc?s=$djsz&p=d&i=0&a=168&r=pang");
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual--').src=text4.val();	
+
+});
+
+$('#button_Aig_Png').on('click', function () {
+        var text4 = $('#text4');
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=aagiy:pngay&p=D&&yr=11&i=p40545395733&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual').src=text4.val();
+
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=aagiy:$one:pngay&p=D&&yr=11&i=p40545395733&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dualplus').src=text4.val();
+        
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=udn:aagiy&p=d&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual_raw').src=text4.val();
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=udn:pngay&p=d&i=0&a=168&r=pang";    
+  
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual++').src=text4.val();
+        
+        var staticstring2 = "http://charts.megahubhk.com/servlets/MHImageChart?sid=54936&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010006&ctype=1&wm=13&p=69";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual+++').src=text4.val();
+	
+        var staticstring2 = "http://charts.megahubhk.com/servlets/MHImageChart?sid=57902&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010006&ctype=1&wm=13&p=69";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual--').src=text4.val();	
+
+});
+	
+$('#button_Tcy_Gee').on('click', function () {
+        var text4 = $('#text4');
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=tcehy:gelyf&yr=6&p=w&p=d&i=0&a=168&r=pang";       
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual').src=text4.val();
+
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=tcehy:$one:gelyf&yr=6&p=w&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dualplus').src=text4.val();
+        
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=udn:tcehy&p=d&i=0&a=168&r=pang";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual_raw').src=text4.val();
+        
+        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=udn:gelyf&p=d&i=0&a=168&r=pang";
+        
+  
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual++').src=text4.val();
+        
+        var staticstring2 = "http://charts.megahubhk.com/servlets/MHImageChart?sid=700&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010006&ctype=1&wm=13&p=69";
+        
+        
+        text4.val(staticstring2);
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual+++').src=text4.val();
+	
+        text4.val("http://stockcharts.com/c-sc/sc?s=gelyf&p=d&i=0&a=168&r=pang");
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual--').src=text4.val();	
+
+});
+	
+$('#button_vb').on('click', function () {
+        var textbb = "bang";
+        var text1 = $('#text1');
+        var text4 = $('#text4');
+  	var text1val = text1.val();
+  	var text4val = text4.val();
+  	var text4aval = $("#text4a").val();
+  	var text4bval = $("#text4b").val();
+        
+        //var staticstring2 = "http://stockcharts.com/c-sc/sc?s=cew:bang&p=w&yr=20&i=0&a=168&r=pang";
+	var staticstring2 ="http://stockcharts.com/c-sc/sc?chart=cew:$one:cew:bang,uu[490,a]waclyyay[dj][pb50!b200!f]&r=pang";
+        
+        
+        text4.val(staticstring2.replaceAll("bang", text1val, true));
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual').src=text4.val();
+
+        //var staticstring2 = "http://stockcharts.com/c-sc/sc?s=bdx:bang&p=w&yr=20&i=0&a=168&r=pang";
+	var staticstring2 ="http://stockcharts.com/c-sc/sc?chart=bdx:$one:bdx:bang,uu[490,a]waclyyay[dj][pb50!b200!f]&r=pang";
+        
+        
+        text4.val(staticstring2.replaceAll("bang", "$one:"+text1val, true));
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dualplus').src=text4.val();
+        
+        
+        //var staticstring2 = "http://stockcharts.com/c-sc/sc?s=bang&p=d&i=0&a=168&r=pang";
+	var staticstring2 ="http://stockcharts.com/c-sc/sc?chart=bang,uu[480,a]daclyyay[dc][pb50!b200!f]&r=pang";
+        
+        
+        text4.val(staticstring2.replaceAll("bang", text1val, true));
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual_raw').src=text4.val();
+        
+        text4.val(staticstring2.replaceAll("bang", "bdx:$one:bdx:$one:" + text1val, true));
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual++').src=text4.val();
+        
+        text4.val(staticstring2.replaceAll("bang", "cew:$one:cew:" + text1val, true));
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('img_dual+++').src=text4.val();
+
+  	var staticstring2 ="http://charts.megahubhk.com/servlets/MHImageChart?sid=bang&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&p=pang";
+  	var staticstring2us ="http://stockcharts.com/c-sc/sc?chart=bang,uu[480,a]daclyyay[dc][pb50!b200!f]&r=pang";
+
+  	if (/[A-Za-z]/.test(text4bval)) {
+    		text4.val(staticstring2us.replaceAll("bang", text4bval, true));
+    		text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+  	} else if ( text4bval != "empty" ) {
+    		text4.val(staticstring2.replaceAll("bang", text4bval, true));
+    		text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+  	}
+  
+  	document.getElementById("img_dual--").src = text4.val();
+	
+});
+
+/////////////////////////////////////
+$("#button_xy").on("click", function () {
+
+  var text1 = $("#text1");
+  var text4 = $("#text4");
+  var text1val = text1.val();
+  var text4val = text4.val();
+  var text4aval = $("#text4a").val();
+  var text4bval = $("#text4b").val();
+	
+  var text2 = $('#text2');
+	
+  // var staticstring2 ="http://stockcharts.com/c-sc/sc?s=bang&p=D&&yr=3&i=p40545395733&r=pang";
+  var staticstring2 ="http://stockcharts.com/c-sc/sc?chart=bang,uu[520,a]waclyyay[dj][pb50!b200!f]&r=pang";
+
+  text4.val(staticstring2.replaceAll("bang", text1val + ":$one:" + text4val, true));
+  text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+  document.getElementById("img_dual").src = text4.val();
+
+  //        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=bdx:bang&p=w&yr=20&i=0&a=168&r=pang";
+
+  text4.val(staticstring2.replaceAll("bang", text1val + ":" + text4val, true));
+  text4.val(text4.val().replaceAll("490", "550", true));
+  text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+text2.val(text4.val());
+  document.getElementById("img_dualplus").src = text4.val();
+
+  // var staticstring2 ="http://stockcharts.com/c-sc/sc?s=bang&p=D&&yr=1&i=p40545395733&r=pang";
+  var staticstring2 ="http://stockcharts.com/c-sc/sc?chart=bang,uu[480,a]daclyyay[dc][pb50!b200!f]&r=pang";
+
+  text4.val(staticstring2.replaceAll("bang", text1val + ":$one:" + text4val, true));
+  text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+  document.getElementById("img_dual_raw").src = text4.val();
+
+  //        var staticstring2 = "http://stockcharts.com/c-sc/sc?s=bdx:bang&p=d&i=0&a=168&r=pang";
+
+  text4.val(staticstring2.replaceAll("bang", text1val + ":" + text4val, true));
+  text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+  document.getElementById("img_dual++").src = text4.val();
+
+  var staticstring2 ="http://charts.megahubhk.com/servlets/MHImageChart?sid=bang&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&p=pang";
+  var staticstring2us ="http://stockcharts.com/c-sc/sc?chart=bang,uu[480,a]daclyyay[dc][pb50!b200!f]&r=pang";
+
+  if (/[A-Za-z]/.test(text4aval)) {
+    text4.val(staticstring2us.replaceAll("bang", text4aval, true));
+    text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+  } else {
+    text4.val(staticstring2.replaceAll("bang", text4aval, true));
+    text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+  }
+  
+  document.getElementById("img_dual+++").src = text4.val();
+	
+  if (/[A-Za-z]/.test(text4bval)) {
+    text4.val(staticstring2us.replaceAll("bang", text4bval, true));
+    text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+  } else {
+    text4.val(staticstring2.replaceAll("bang", text4bval, true));
+    text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+  }
+  
+  document.getElementById("img_dual--").src = text4.val();
+/*	
+  text4.val(staticstring2.replaceAll("bang", text4aval, true));
+  text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+  document.getElementById("img_dual+++").src = text4.val();
+	
+  text4.val(staticstring2.replaceAll("bang", text4bval, true));
+  text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+  document.getElementById("img_dual--").src = text4.val();
+*/	
+  // resume text4
+  text4.val(text4val);
+});
+	
+$('#sector_mon').on('click', 'button', function () {
+
+	document.getElementById('img_xxxk').src="http://www.advfn.com/p.php?pid=staticchart&s=FX^usdkrw&p=0&t=16&k=66&m=85&dm=2&q=" + Math.floor(Math.random() * (100 + 1) + 0);
+
+	document.getElementById('img_mon1').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=7261&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+
+	document.getElementById('img_mon2').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1299&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_mon3').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=3968&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_mon4').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=0700&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_mon4_1').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=9988&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_mon5').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1299&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_mon6').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=7262&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_mon7').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=0522&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_mon8').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=0175&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_mon8a').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=0700&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_mon9').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=2318&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_mon10').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=3188&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	
+
+	
+});
+	
+$('#sector_fd').on('click', 'button', function () {
+
+	document.getElementById('img_fdxxxk').src="http://www.advfn.com/p.php?pid=staticchart&s=FX^usdkrw&p=0&t=16&k=66&m=85&dm=2&q=" + Math.floor(Math.random() * (100 + 1) + 0);
+
+	document.getElementById('img_fdmon1').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=7261&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon1-1').src="https://charts.megahubhk.com/servlets/MHImageChart?sid=7261&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&" + Math.floor(Math.random() * (100 + 1) + 0);
+
+	document.getElementById('img_fdmon2').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=2812&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon2-1').src="https://charts.megahubhk.com/servlets/MHImageChart?sid=2812&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon3').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=2018&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon3-1').src="https://charts.megahubhk.com/servlets/MHImageChart?sid=2018&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon4').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1801&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon4-1').src="https://charts.megahubhk.com/servlets/MHImageChart?sid=1801&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon5').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1299&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon5-1').src="https://charts.megahubhk.com/servlets/MHImageChart?sid=1299&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon6').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1093&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon6-1').src="https://charts.megahubhk.com/servlets/MHImageChart?sid=1093&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon7').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=0175&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon7-1').src="https://charts.megahubhk.com/servlets/MHImageChart?sid=0175&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&" + Math.floor(Math.random() * (100 + 1) + 0);
+
+	document.getElementById('img_fdmon8').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=0700&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon8-1').src="https://charts.megahubhk.com/servlets/MHImageChart?sid=0700&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&" + Math.floor(Math.random() * (100 + 1) + 0);
+//	document.getElementById('img_fdmon9').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=2318&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+//	document.getElementById('img_fdmon9-1').src="https://charts.megahubhk.com/servlets/MHImageChart?sid=2318&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon10').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=268&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon10-1').src="https://charts.megahubhk.com/servlets/MHImageChart?sid=268&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon11').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=3888&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon11-1').src="https://charts.megahubhk.com/servlets/MHImageChart?sid=3888&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon12').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=696&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon12-1').src="https://charts.megahubhk.com/servlets/MHImageChart?sid=696&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon13').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=2269&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon13-1').src="https://charts.megahubhk.com/servlets/MHImageChart?sid=2269&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon14').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=6160&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon14-1').src="https://charts.megahubhk.com/servlets/MHImageChart?sid=6160&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon15').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1177&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon15-1').src="https://charts.megahubhk.com/servlets/MHImageChart?sid=1177&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon16').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=354&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_fdmon16-1').src="https://charts.megahubhk.com/servlets/MHImageChart?sid=354&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=9&&cr=106&cwidth=275&cheight=175&lang=1&cperiod=1010003&ctype=1&wm=16&" + Math.floor(Math.random() * (100 + 1) + 0);
+
+
+	
+});
+	
+$('#button_mon_bob').on('click', function () {
+	
+});	
+	
+$('#sector_front').on('click', 'button', function () {
+	shineall();
+});
+
+function shineall() {
+        var textbb = "bang";
+        var text3 = $('#text3');
+	var text3a = $('#text3a');
+//        var text4 = $('#text4');
+        var text4 = $('#text2');
+        
+        var staticstring2 = "http://charts.megahubhk.com/servlets/MHImageChart?sid=bang&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&p=pang";
+        
+        
+        text4.val(staticstring2.replaceAll("bang", text3.val(), true));
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('imgbb').src=text4.val();
+
+        var staticstring2 = "http://charts.megahubhk.com/servlets/MHImageChart?sid=bang&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=pang";
+        
+        
+        text4.val(staticstring2.replaceAll("bang", text3.val(), true));
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('imgbb_plus').src=text4.val();
+
+        var staticstring2 = "http://charts.megahubhk.com/servlets/MHImageChart?sid=bang&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&p=pang";
+      
+        
+        text4.val(staticstring2.replaceAll("bang", text3a.val(), true));
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('imgbb_plus1').src=text4.val();
+	
+        var staticstring2 = "http://charts.megahubhk.com/servlets/MHImageChart?sid=bang&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=pang";
+          
+        
+        text4.val(staticstring2.replaceAll("bang", text3a.val(), true));
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('imgbb_plus2').src=text4.val();
+
+        document.getElementById('imgbb1').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=823&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+        
+        document.getElementById('imgbb2').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1686&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+
+        document.getElementById('imgbb3').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=VHSI&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+        
+        document.getElementById('imgbb4').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=VHSI&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);        
+
+
+  
+        document.getElementById('imgleg1').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1772&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+        
+        document.getElementById('imgleg2').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=3147&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+
+  
+        document.getElementById('img_hsic_l').src="http://asia.advfn.com/p.php?pid=staticchart&s=COM^SI\\Z20&p=0&t=16&" + Math.floor(Math.random() * (100 + 1) + 0);
+ 
+        document.getElementById('img_hsic').src="http://asia.advfn.com/p.php?pid=staticchart&s=COM^GC\\Z20&p=0&t=16&" + Math.floor(Math.random() * (100 + 1) + 0);
+        
+        document.getElementById('img_hsip_l').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=68000&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+ 
+	document.getElementById('img_hsip').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=68000&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+      
+      
+        document.getElementById('img_gbp').src="http://asia.advfn.com/p.php?pid=staticchart&s=FX^gbphkd&p=0&t=16&k=" + Math.floor(Math.random() * (100 + 1) + 0); 
+      
+        document.getElementById('img_btc').src="http://asia.advfn.com/p.php?pid=staticchart&s=COIN^BTCUSD&p=0&t=16&z=" + Math.floor(Math.random() * (100 + 1) + 0);
+        
+        document.getElementById('img_krw').src="http://asia.advfn.com/p.php?pid=staticchart&s=FX^usdkrw&p=2&t=16&k=" + Math.floor(Math.random() * (100 + 1) + 0); 
+      
+        document.getElementById('img_cny').src="http://asia.advfn.com/p.php?pid=staticchart&s=FX^cnhhkd&p=2&t=16&dm=2&k=" + Math.floor(Math.random() * (100 + 1) + 0);
+        
+        document.getElementById('img_shi_l').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=338&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+        document.getElementById('img_shi').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=338&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+                    
+        document.getElementById('img_snp_l').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=386&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+        document.getElementById('img_snp').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=386&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+               
+        document.getElementById('img_wynn_l').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1128&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010009&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+        document.getElementById('img_wynn').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1128&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+   
+
+        document.getElementById('img_pngay').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=2318&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+        
+        document.getElementById('img_fxp').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=2828&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+// mon 123
+	document.getElementById('img_mon1').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=7261&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+	document.getElementById('img_mon2').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=1299&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+ 	document.getElementById('img_mon3').src="http://charts.megahubhk.com/servlets/MHImageChart?sid=3968&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1000305&ctype=1&wm=13&p=" + Math.floor(Math.random() * (100 + 1) + 0);
+};
+	
+$('#buttonxx').on('click', function () {
+        var textbb = "bang";
+        var text3 = $('#text3');
+        var text4 = $('#text4');
+  	shineall();
+
+	var staticstring2 = "http://charts.megahubhk.com/servlets/MHImageChart?sid=bang&mChart2=11&m2p1=7&cmode=1&vol=1&intTech1=1&it1p1=50&it1p5=200&tstyle=2&fsize=10&&cr=106&cwidth=499&cheight=375&lang=1&cperiod=1010500&ctype=1&wm=13&p=pang";
+        
+        
+        text4.val(staticstring2.replaceAll("bang", text3.val(), true));
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('imgbb_plus1').src=text4.val();
+	
+        var staticstring2 = "http://charts.aastocks.com/servlet/Charts?fontsize=12&15MinDelay=T&lang=1&titlestyle=1&vol=1&Indicator=1&indpara1=10&indpara2=20&indpara3=50&indpara4=100&indpara5=150&subChart1=11&ref1para1=14&ref1para2=0&ref1para3=0&scheme=1&com=100&chartwidth=595&chartheight=480&stockid=bang.HK&period=2060&type=1&p=pang";
+        
+        
+        text4.val(staticstring2.replaceAll("bang", text3.val(), true));
+        text4.val(text4.val().replaceAll("pang", Math.floor(Math.random() * (100 + 1) + 0), true));
+
+        document.getElementById('imgbb_plus2').src=text4.val();
+});
+
+</script>
+
+<script type="text/javascript">
+
+</script>
+
+
+ 
+</body>
+</html>
+<html>
+<div class="note">
+  <pre>
+http://www.kitco.com/images/live/silver.gif
+  <br />
+http://stockcharts.com/def/servlet/SharpChartv05.ServletDriver?chart=vwesx:bang,uu[l,a]daclyyay[d20070801][pb50!b100!f][vc60][iul14!xx12,26,9]&a=168&r=0998
+  <br />
+http://stockcharts.com/c-sc/sc?chart=vwesx:bang,uu[460,a]wacayaci[d20010101][pb50!b200!f]&a=168&r=0998
+  <br />
+https://stockcharts.com/c-sc/sc?chart=qqq,uu[700,390]whclyyay[dj][pb50!b200!d20,2!f][iut!ll5]&r=3
+  <br />
+友邦匯豐六乙熊Ａ
+熊60573.HK
+  <br />
+>HSBC
+69033 4L
+54139 6S
+>NTES
+50111 10L
+51572 3S
+  <br />
+>SP500
+x07222 2L
+07322 1S
+  <br />
+>NDX
+07266 2L
+07522 2S
+  <br />
+>TWII
+07232 2L
+07332 1S
+  <br />
+>KOSPI
+x7250 2L
+x7326 1S
+  <br />
+>HS
+02833
+  <br />
+>A50
+02822
+  <br />
+>CS300
+07233 2L
+07333 S
+03188
+  <br />
+>wynn yzcay
+>infra 3311 3339
+>consum 3333 3383 2777 2333 1193
+  <br />
+>N50
+7202 2L
+7335 1S
+>HS 2L7200 S7300
+>CE 2L7288 S7388
+_    _
+$NIFTYPR2XLEV:$spx,uu[460,a]dallyyay[d20140101][pb50!b200!f]      
+  <br />  
+$tsx:$ndx 7261
+$tsx:ewh 1299
+$tsx:fxi 3968
+bdx:tcehy
+bdx:smicy 981
+$tsx:ezj 7262
+bdx:asmiy 522
+bdx:8008:1686
+bdx:2018
+tcehy:gelyf 175  
+  <br />
+SCO $WTIC.....
+croc $xad.....
+*qid $ndx.....
+ycs $xjy.....
+*ewv $nikk.....
+*fxp $hsi.....
+*$indiavix $nifty.....
+*$vxn $ndx.....
+ <br />
+<a name="XX" style="font-weight:normal; font-size:33px; background-color:#0FF00F; color:white">**</a>
+  <br />
+jsfiddle.net/adoprog/s4tue5g6/
+{"queue":[{"key":"1088","key2":"1088","name":"Banana"},{"key":"1099","key2":"1088","name":"Orange"}]}
+api.jsonstorage.net/index.html
+api.npoint.io
+codepen.io/SeanThorne/details/QWpoVyB
+https://jsonblob.com/
+ <br />
+<a name="XX" style="font-weight:normal; font-size:33px; background-color:#0FF00F; color:white">**</a>
+  <br />
+{ "key": "race1K", "name": "1208...2600", "key2": "//" }, { "key": "race2K", "name": "2013...8083", "key2": "//" }, { "key": "race3K", "name": "0819...2357", "key2": "//" }, { "key": "race4K", "name": "1302...68494", "key2": "//" }, { "key": "race5K", "name": "1810...3800", "key2": "//" }, { "key": "race6K", "name": "9923...2400", "key2": "//" }, { "key": "race7K", "name": "2314...1812", "key2": "//" }, { "key": "race8K", "name": "1579...6862", "key2": "//" }, { "key": "race9K", "name": "", "key2": "//" }, { "key": "race10K", "name": "", "key2": "//" }, { "key": "race11K", "name": "", "key2": "//" }, { "key": "race1Q", "name": "iwf...iwd", "key2": "//" }, { "key": "race2Q", "name": "onc...onc", "key2": "//" }, { "key": "race3Q", "name": "fxl...fxl", "key2": "//" }, { "key": "race4Q", "name": "xpp...xpp", "key2": "//" }, { "key": "race5Q", "name": "okta...okta", "key2": "//" }, { "key": "race6Q", "name": "twlo...twlo", "key2": "//" }, { "key": "race7Q", "name": "avlr...avlr", "key2": "//" }, { "key": "race8Q", "name": "docu...docu", "key2": "//" }, { "key": "race9Q", "name": "casbf...mrna", "key2": "//" }, { "key": "race10Q", "name": "", "key2": "//" }, { "key": "race11Q", "name": "", "key2": "//" }, { "key": "race1J", "name": "aagiy...pngay...7500...68494", "key2": "//" }, { "key": "race2J", "name": "iwd...iwf...fcx...asml", "key2": "//" }, { "key": "race3J", "name": "$hsi...$ssec...7373...3024", "key2": "//" }, { "key": "race4J", "name": "$hsi...ashr...yang...64026", "key2": "//" }, { "key": "race5J", "name": "cew...fxp...7500...3690", "key2": "//" }, { "key": "race6J", "name": "slv...yinn...7299...7200", "key2": "//" }, { "key": "race7J", "name": "hzd.to...yinn...zsl...yang", "key2": "//" }, { "key": "race8J", "name": "qbtc/u.to...mara...0700...1611", "key2": "//" }, { "key": "race9J", "name": "qbtc/u.to...tcehy...0700...mara", "key2": "//" }, { "key": "race10J", "name": "frcoy...yinn...6288...7288", "key2": "//" }, { "key": "race11J", "name": "tsla...byddy...1211...285", "key2": "//" }, { "key": "race1T", "name": "hzd.to...pngay:$one:aagiy...7299...1299", "key2": "//" }, { "key": "race2T", "name": "bdx...tecl...7261...68494", "key2": "//" }, { "key": "race3T", "name": "frcoy...scco...2899...7288", "key2": "//" }, { "key": "race4T", "name": "tcehy...asml...tcehy...asml", "key2": "//" }, { "key": "race5T", "name": "hzd.to...fcx...2899...7299", "key2": "//" }, { "key": "race6T", "name": "gld...cnxt...3147...7299", "key2": "//" }, { "key": "race7T", "name": "ea...tcehy...ea...0700", "key2": "//" }, { "key": "race8T", "name": "fxi...ecns...7200...669", "key2": "//" }, { "key": "race9T", "name": "casbf...mrna...6185...mrna", "key2": "//" }
+<br />
+<a name="XX" style="font-weight:normal; font-size:33px; background-color:#0FF00F; color:white">**</a>
+  <br />
+新天綠色能源
+(00956.HK)
+  <br />
+華潤燃氣
+(01193.HK)
+  <br />
+中國太保
+(02601.HK)
+  <br />
+新奧能源
+(02688.HK)
+  <br />
+中國聯塑
+(02128.HK)
+  <br />
+<a name="XX" style="font-weight:normal; font-size:33px; background-color:#0FF00F; color:white">**</a>
+  <br />
+https://www.hkmoneyclub.com/2020/11/30/
+3隻恍如生財機器的收息股
+Sonne Danke
+  <br />
+NYSE：ABBV
+<br />
+NYSE：BEP
+<br />
+NYSE:IIPR
+  <br />
+美股顺势而为
+  <br />
+睿力组合ZH2500231
+  <br />
+obermatt "They are good alternative stock investment opportunities to consider"
+  <br />
+<a name="XX" style="font-weight:normal; font-size:33px; background-color:#0FF00F; color:white">**</a>
+  <br />
+增長收息股
+https://money-tab.com/2020/10/04/31177
+<br />
+TSX:BMO
+<br />
+TSX:ENB
+  <br />
+<a name="XX" style="font-weight:normal; font-size:33px; background-color:#0FF00F; color:white">**</a>
+  <br />
+【高息股】疫市見增長+股息逾10厘 一隻「蚊型Size」優質收息股
+https://invest.hket.com/article/2684683
+  <br />
+專營運動服OEM、ODM的鷹美（02368）
+  <br />
+<a name="XX" style="font-weight:normal; font-size:33px; background-color:#0FF00F; color:white">**</a>
+  <br />
+stockcharts.com/c-sc/sc?s=bang&p=D&id=p46751897006&r=pang
+  <br />
+<a name="XX" style="font-weight:normal; font-size:33px; background-color:#0FF00F; color:white">**</a>
+  <br />
+//ADX(7)
+&id=p78855936644&a=380517511
+  <br />
+//ADX(5)
+&i=p8114168745c&a=635806730&r=1544761759229
+  <br />
+stocktwits..../SoundsLikeBullShitToMe
+  <br />
+stockcharts.com/public/1092905/chartbook/932867980
+  <br />
+p13397071148
+  <br />
+p22359088213
+  <br />
+p00248517312
+  <br />
+p24836627148
+  <br />
+2022 (Phase II) Consumption Voucher Scheme] (ref. no.: TSAF83AZALKWPVU) The 2nd consumption voucher is available for collection. Enquiry: 29695588 .... 
+eform.consumptionvoucher.gov.hk/update/zh-HK/ewallet-id
+  <br />
+c-sc/sc?chart=INQD,uu[w,a]dhclyiay[db][pb50!b5!d20,2][iut!]
+  <br />
+<a name="XX" style="font-weight:normal; font-size:33px; background-color:#0FF00F; color:white">**</a>
+  <br />
+  </div>
+</html>
+
+url1='http://c.stockcharts.com/c-sc/sc?s=fxp&p=w&&yr=13&i=0&w=700&h=500r=0999';	
+	
+	
